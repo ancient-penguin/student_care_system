@@ -1,0 +1,179 @@
+# 근거 문장 틀 [초안] — 선생님이 수정하는 데이터.
+# 슬롯 값이 리스트이면 선택형, text이면 입력형.
+# 이 파일의 태그 순서가 학생 화면의 태그 표시 순서가 된다.
+# 수정 후 적재: cd backend && python -m scripts.load_templates
+
+- kind: grammar
+  tag: 수일치
+  judgement: wrong
+  body: "이 문장의 주어는 {subject}이고 {number}이므로, 동사는 {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    subject: text
+    number: [단수, 복수]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 수일치
+  judgement: right
+  body: "이 문장의 주어는 {subject}이고 {number}이므로, 동사 {verb}가 맞다."
+  slots:
+    subject: text
+    number: [단수, 복수]
+    verb: text
+
+- kind: grammar
+  tag: 관계사
+  judgement: wrong
+  body: "밑줄 뒤의 절이 {completeness}한 문장이므로, {current}가 아니라 {fixed}가 와야 한다."
+  slots:
+    completeness: [완전, 불완전]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 관계사
+  judgement: right
+  body: "밑줄 뒤의 절이 {completeness}한 문장이므로, {word}가 맞다."
+  slots:
+    completeness: [완전, 불완전]
+    word: text
+
+- kind: grammar
+  tag: 접속사·명사절
+  judgement: wrong
+  body: "이 자리에는 {role}이(가) 필요하므로, {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    role: [접속사, 전치사, 명사절을 이끄는 접속사, 의문사]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 접속사·명사절
+  judgement: right
+  body: "이 자리에는 {role}이(가) 필요하므로, {word}가 맞다."
+  slots:
+    role: [접속사, 전치사, 명사절을 이끄는 접속사, 의문사]
+    word: text
+
+- kind: grammar
+  tag: 준동사
+  judgement: wrong
+  body: "{trigger}와(과) 연결되는 형태는 {form}이므로, {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    trigger: text
+    form: [to부정사, 동명사, 원형부정사]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 준동사
+  judgement: right
+  body: "{trigger}와(과) 연결되는 형태는 {form}이므로, {word}가 맞다."
+  slots:
+    trigger: text
+    form: [to부정사, 동명사, 원형부정사]
+    word: text
+
+- kind: grammar
+  tag: 분사
+  judgement: wrong
+  body: "수식받는 {noun}과(와) 분사의 관계가 {relation}이므로, {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    noun: text
+    relation: [능동, 수동]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 분사
+  judgement: right
+  body: "수식받는 {noun}과(와) 분사의 관계가 {relation}이므로, {word}가 맞다."
+  slots:
+    noun: text
+    relation: [능동, 수동]
+    word: text
+
+- kind: grammar
+  tag: 본동사 유무
+  judgement: wrong
+  body: "이 문장의 주어는 {subject}인데 본동사가 {exists}. 따라서 {current}는 {fixed}가 되어야 한다."
+  slots:
+    subject: text
+    exists: [있다, 없다]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 본동사 유무
+  judgement: right
+  body: "이 문장의 주어는 {subject}이고 본동사는 {verb}이므로 맞다."
+  slots:
+    subject: text
+    verb: text
+
+- kind: grammar
+  tag: 대명사
+  judgement: wrong
+  body: "{current}는 {referent}을(를) 가리키고 {number}이므로, {fixed}가 되어야 한다."
+  slots:
+    current: text
+    referent: text
+    number: [단수, 복수]
+    fixed: text
+- kind: grammar
+  tag: 대명사
+  judgement: right
+  body: "{word}는 {referent}을(를) 가리키고 {number}이므로 맞다."
+  slots:
+    word: text
+    referent: text
+    number: [단수, 복수]
+
+- kind: grammar
+  tag: 형용사·부사
+  judgement: wrong
+  body: "{current}는 {target}을(를) 꾸미는 말인데 그 자리는 {role}이 오는 자리이므로, {fixed}가 되어야 한다."
+  slots:
+    current: text
+    target: text
+    role: [형용사, 부사]
+    fixed: text
+- kind: grammar
+  tag: 형용사·부사
+  judgement: right
+  body: "{word}는 {target}을(를) 꾸미는 말이고 그 자리는 {role}이 오는 자리이므로 맞다."
+  slots:
+    word: text
+    target: text
+    role: [형용사, 부사]
+
+- kind: grammar
+  tag: 병렬
+  judgement: wrong
+  body: "{conj} 앞뒤로 {pair}이(가) 병렬되므로, {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    conj: text
+    pair: text
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 병렬
+  judgement: right
+  body: "{conj} 앞뒤로 {pair}이(가) 병렬되므로, {word}가 맞다."
+  slots:
+    conj: text
+    pair: text
+    word: text
+
+- kind: grammar
+  tag: 태(능동·수동)
+  judgement: wrong
+  body: "주어 {subject}와 동사의 관계가 {relation}이므로, {current}가 아니라 {fixed}가 되어야 한다."
+  slots:
+    subject: text
+    relation: [능동, 수동]
+    current: text
+    fixed: text
+- kind: grammar
+  tag: 태(능동·수동)
+  judgement: right
+  body: "주어 {subject}와 동사의 관계가 {relation}이므로, {word}가 맞다."
+  slots:
+    subject: text
+    relation: [능동, 수동]
+    word: text

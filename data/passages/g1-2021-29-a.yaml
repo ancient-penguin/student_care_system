@@ -1,0 +1,44 @@
+passage_id: g1-2021-29-a
+kind: grammar
+source: 고1 2021 / 29번
+text: >
+  Although there is usually a correct way of holding and playing musical
+  instruments, the most important instruction to begin with is [[1]] they are
+  not toys and that they must be looked after. [[2]] children time to explore
+  ways of handling and playing the instruments for themselves before showing
+  them. Finding different ways to produce sounds [[3]] an important stage of
+  musical exploration. Correct playing comes from the desire [[4]] the most
+  appropriate sound quality and find the most comfortable playing position so
+  that one can play with control over time. As instruments and music become
+  more complex, learning appropriate playing techniques becomes [[5]] relevant.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: is의 보어 자리에 완전한 절(they are not toys ...)이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 2
+    choice: Allow
+    is_correct: true
+    tag: 본동사 유무
+    model_slots: { subject: 생략된 you(명령문), verb: Allow }
+    explanation: 명령문의 동사원형으로서 문장의 본동사 역할을 하므로 Allow가 맞다.
+  - no: 3
+    choice: are
+    is_correct: false
+    tag: 수일치
+    model_slots: { subject: Finding different ways to produce sounds, number: 단수, current: are, fixed: is }
+    explanation: 주어는 sounds가 아니라 동명사구 Finding ... sounds이므로 단수로 취급해 is가 되어야 한다.
+  - no: 4
+    choice: to find
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: desire, form: to부정사, word: to find }
+    explanation: 명사 desire를 수식하는 to부정사이고, and 뒤의 find와 병렬을 이루므로 to find가 맞다.
+  - no: 5
+    choice: increasingly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { target: relevant, role: 부사, word: increasingly }
+    explanation: increasingly는 형용사 relevant를 수식하는 부사이므로 맞다.

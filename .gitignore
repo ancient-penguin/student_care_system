@@ -1,0 +1,23 @@
+# 비밀값
+.env
+.env.*
+!.env.example
+
+# 백업 덤프
+*.dump
+*.sql.gz
+backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# 기타
+.DS_Store
+.vscode/
