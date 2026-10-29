@@ -1,0 +1,49 @@
+passage_id: g1-2025-09-29
+kind: grammar
+source: 고1 2025년 9월 학평 / 29번
+text: >
+  Big mammalian herbivore species react to danger from predators or humans in
+  different ways. Some species are nervous, fast, and programmed for instant
+  flight when they perceive a threat. Other species are slower, less nervous,
+  seek protection in herds, [[1]] their ground when threatened, and don’t run
+  until necessary. Naturally, the nervous species are difficult to keep in
+  captivity. If [[2]] into an enclosure, they are likely to panic, and either
+  die of shock or hit themselves repeatedly to death against the fence in
+  their attempts to escape. That’s true, for example, of gazelles, [[3]] for
+  thousands of years were the most frequently hunted game species in some
+  parts of the Fertile Crescent. There is no mammal species that the first
+  settled peoples of that area had more opportunity [[4]] than gazelles. But
+  no gazelle species has ever been domesticated. Just imagine trying to herd
+  an animal that runs away, blindly hits [[5]] against walls, can leap up to
+  nearly 30 feet, and can run at a speed of 50 miles per hour!
+items:
+  - no: 1
+    choice: stand
+    is_correct: true
+    tag: 병렬
+    model_slots: { conj: and, pair: "are, seek, stand, don’t run(동사)", word: stand }
+    explanation: 주어 Other species의 동사들이 and로 병렬되므로 동사원형 stand가 맞다.
+  - no: 2
+    choice: putting
+    is_correct: false
+    tag: 분사
+    model_slots: { noun: they(the nervous species), relation: 수동, current: putting, fixed: put }
+    explanation: If (they are) put의 형태로, 주어가 우리에 넣어지는 수동 관계이므로 putting이 아니라 put이 되어야 한다.
+  - no: 3
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 불완전, word: which }
+    explanation: 선행사 gazelles 뒤에 주어가 빠진 불완전한 절이 이어지므로 계속적 용법의 관계대명사 which가 맞다.
+  - no: 4
+    choice: to domesticate
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: opportunity, form: to부정사, word: to domesticate }
+    explanation: 명사 opportunity를 수식하는 to부정사이므로 to domesticate가 맞다.
+  - no: 5
+    choice: itself
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: itself, referent: an animal, number: 단수 }
+    explanation: hits의 주어와 목적어가 같은 an animal이므로 단수 재귀대명사 itself가 맞다.

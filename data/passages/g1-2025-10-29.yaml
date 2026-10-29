@@ -1,0 +1,64 @@
+passage_id: g1-2025-10-29
+kind: grammar
+source: 고1 2025년 10월 학평 / 29번
+text: >
+  Human beings have evolved to make the most of the resources available to them
+  in ways that are subtle and complicated. When we change our diets, especially
+  when we do so quickly, we are [[1]] conducting huge experiments in nutrition.
+  We ought to have more humility. Nutritional science is still young and there
+  is so much we do not know. If we have eaten certain foods in certain ways for
+  millennia, we should assume until it is proven otherwise [[2]] there is
+  probably a good reason why. Traditional foods that don’t fit neatly on the
+  contemporary dietary food plate should generally be chosen over highly
+  processed ones that [[3]]. We should assume that traditionally [[4]] fatty
+  blood sausages are preferable to lean, factory-made salamis; that spoonfuls of
+  honey are superior to sprinkles of sweeteners. Witnessing how poorly
+  traditional societies are faring as they undergo a nutrition transition should
+  make those who have already completed it [[5]] whether their diets have moved
+  too far.
+items:
+  - no: 1
+    choice: effectively
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: effectively
+      target: conducting
+      role: 부사
+    explanation: 동사 conducting을 수식하는 자리이므로 부사 effectively가 맞다.
+  - no: 2
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: what
+      fixed: that
+    explanation: assume의 목적어 자리에 완전한 절이 이어지므로 what이 아니라 명사절 접속사 that이 되어야 한다.
+  - no: 3
+    choice: do
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: that(선행사 ones)
+      number: 복수
+      verb: do
+    explanation: fit neatly ...를 대신하는 대동사이고 선행사 ones가 복수이므로 do가 맞다.
+  - no: 4
+    choice: made
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: fatty blood sausages
+      relation: 수동
+      word: made
+    explanation: "sausages가 전통적으로 '만들어진' 수동 관계이므로 과거분사 made가 맞다."
+  - no: 5
+    choice: question
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 사역동사 make
+      form: 원형부정사
+      word: question
+    explanation: 사역동사 make의 목적격 보어 자리이므로 원형부정사 question이 맞다.

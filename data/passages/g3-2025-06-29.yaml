@@ -1,0 +1,49 @@
+passage_id: g3-2025-06-29
+kind: grammar
+source: 고3 2025년 6월 모평 / 29번
+text: >
+  Changes in the degree of closeness [[1]] quite important in managing
+  emotional intensity. Take, for example, emotions induced by television.
+  Closeness and familiarity are important in making the fictional environment
+  more [[2]]. Accordingly, most TV shows are set in the present or in a time
+  within the memory of the viewers. Most characters are supposed to be types
+  with whom we are familiar. Such closeness and familiarity make it easier for
+  us [[3]] the imaginary story to be a real one. In other circumstances, such
+  as when violence is shown on TV, the closeness variable is used to reduce
+  emotional intensity. Television entertainment tends to place social problems
+  involving violence in another time and place, letting us watch those
+  fictionalized characters search for solutions to our problems in settings
+  [[4]] distanced from our own. When violence occurs in a contemporary
+  setting, it is generally the product of the interaction of police and
+  criminals ― again, it is [[5]] from the lives of good citizenry.
+items:
+  - no: 1
+    choice: are
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: Changes in the degree of closeness, number: 복수, verb: are }
+    explanation: 주어의 핵심은 Changes로 복수이므로 are가 맞다.
+  - no: 2
+    choice: real
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: real, target: the fictional environment, role: 형용사 }
+    explanation: making의 목적격보어 자리로 목적어를 설명하므로 형용사 real이 맞다.
+  - no: 3
+    choice: perceive
+    is_correct: false
+    tag: 준동사
+    model_slots: { trigger: 가목적어 it, form: to부정사, current: perceive, fixed: to perceive }
+    explanation: make it easier for us 뒤 가목적어 it의 진목적어 자리이므로 perceive가 아니라 to perceive가 되어야 한다.
+  - no: 4
+    choice: safely
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: safely, target: distanced, role: 부사 }
+    explanation: 과거분사 distanced를 수식하는 부사이므로 safely가 맞다.
+  - no: 5
+    choice: removed
+    is_correct: true
+    tag: 태(능동·수동)
+    model_slots: { subject: it, relation: 수동, word: removed }
+    explanation: 주어 it(폭력)이 선량한 시민의 삶에서 떨어져 있게 되는 수동 관계이므로 is removed가 맞다.

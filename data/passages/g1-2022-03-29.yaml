@@ -1,0 +1,61 @@
+passage_id: g1-2022-03-29
+kind: grammar
+source: 고1 2022년 3월 학평 / 29번
+text: >
+  We usually get along best with people who we think are like us. In fact, we
+  seek them out. It’s why places like Little Italy, Chinatown, and Koreatown
+  [[1]]. But I’m not just talking about race, skin color, or religion. I’m
+  talking about people who share our values and look at the world the same way
+  we [[2]]. As the saying goes, birds of a feather flock together. This is a
+  very common human tendency [[3]] is rooted in how our species developed.
+  Imagine you are walking out in a forest. You would be conditioned to avoid
+  something unfamiliar or foreign because there is a high likelihood that [[4]]
+  would be interested in killing you. Similarities make us [[5]] better to other
+  people because we think they’ll understand us on a deeper level than other
+  people.
+items:
+  - no: 1
+    choice: exist
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: places like Little Italy, Chinatown, and Koreatown
+      number: 복수
+      verb: exist
+    explanation: 주어가 places like ... Koreatown으로 복수이므로 복수 동사 exist가 맞다.
+  - no: 2
+    choice: do
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: we
+      number: 복수
+      verb: do
+    explanation: 앞의 일반동사 look을 대신하는 대동사이고 주어가 we이므로 do가 맞다.
+  - no: 3
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      current: what
+      fixed: that
+    explanation: 선행사 a very common human tendency가 있고 뒤의 절에 주어가 없으므로 what이 아니라 주격 관계대명사 that(which)이 되어야 한다.
+  - no: 4
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: it
+      referent: something unfamiliar or foreign
+      number: 단수
+    explanation: it은 단수인 something unfamiliar or foreign을 가리키므로 맞다.
+  - no: 5
+    choice: relate
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: make
+      form: 원형부정사
+      word: relate
+    explanation: 사역동사 make의 목적격보어 자리이므로 원형부정사 relate가 맞다.

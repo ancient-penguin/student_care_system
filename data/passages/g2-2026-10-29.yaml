@@ -1,0 +1,61 @@
+passage_id: g2-2026-10-29
+kind: grammar
+source: 고2 2026년 10월 학평 / 29번
+text: >
+  You might think of survival as a race [[1]] a hurdle has to be jumped every
+  year. The early hurdles were once very high, and many people fell before
+  clearing the first few. Demographically, humankind was living close to a state
+  of nature, and nature is extremely wasteful of life. From only a very small
+  number of figs will even one of many seeds [[2]] a fig tree. Almost a quarter
+  of baboons born in the wild die before they are a year old, which [[3]] fairly
+  typical for primates. Infant mortality rates for humans in pre-modern
+  agricultural societies were similar to, and sometimes higher, than [[4]] of
+  apes. Things were little better for our hunter-gatherer ancestors, a quarter
+  of [[5]] failed to reach their first birthday, while another quarter didn’t
+  live long enough to reproduce just about everywhere until the nineteenth
+  century. Had it been otherwise, the huge recent growth in human population
+  would have occurred much earlier.
+items:
+  - no: 1
+    choice: in which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: in which
+    explanation: 전치사 in과 관계대명사 which가 결합된 형태로 뒤에 완전한 절이 이어지므로 in which가 맞다.
+  - no: 2
+    choice: become
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: one of many seeds
+      verb: become
+    explanation: 부사구가 문두에 와서 도치된 문장으로 조동사 will 뒤에 동사원형이 와야 하므로 become이 맞다.
+  - no: 3
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: which(앞 절 전체)
+      number: 단수
+      verb: is
+    explanation: 계속적 용법의 which가 앞 절 전체를 받으므로 단수 동사 is가 맞다.
+  - no: 4
+    choice: those
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: those
+      referent: Infant mortality rates
+      number: 복수
+    explanation: 앞의 복수 명사 Infant mortality rates를 대신하므로 those가 맞다.
+  - no: 5
+    choice: them
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: them
+      fixed: whom
+    explanation: 콤마 뒤에 접속사 없이 절(a quarter of ... failed)이 이어지므로 them이 아니라 접속사 역할을 하는 관계대명사 whom이 되어야 한다.

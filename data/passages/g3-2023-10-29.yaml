@@ -1,0 +1,63 @@
+passage_id: g3-2023-10-29
+kind: grammar
+source: 고3 2023년 10월 학평 / 29번
+text: >
+  Dr. Joseph Bell was a professor of medicine at the University of Edinburgh.
+  His students were amazed by his astonishing powers of observation. He seemed
+  able to determine what patients did for a living, or what illness [[1]] might
+  have, simply by glancing in their direction. One time he concluded that a
+  patient [[2]] across a golf course on the way to the doctor, simply by looking
+  at his shoes. One of Bell’s students was particularly impressed with his
+  teacher’s abilities. He filled up notebooks with examples of [[3]] he called
+  Bell’s “eerie trick of spotting details.” The student eventually went into
+  practice himself outside London. When business was slow he filled his spare
+  moments by writing stories. He took Dr. Bell’s powers of perception, and gave
+  them to a character of his own making— a character who made the young doctor,
+  Arthur Conan Doyle, [[4]] around the world. And so the professor who made even
+  the most complex diagnosis seem “elementary” [[5]] the inspiration for
+  fiction’s greatest detective, Sherlock Holmes.
+items:
+  - no: 1
+    choice: they
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: they
+      referent: patients
+      number: 복수
+    explanation: 앞의 복수 명사 patients를 가리키므로 they가 맞다.
+  - no: 2
+    choice: had walked
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: a patient
+      verb: had walked
+    explanation: 진단을 내린(concluded) 시점보다 골프장을 걸어온 일이 먼저이므로 과거완료 had walked가 맞다.
+  - no: 3
+    choice: what
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: what
+    explanation: 전치사 of의 목적어 자리이고 뒤의 절에 called의 목적어가 빠진 불완전한 절이므로 what이 맞다.
+  - no: 4
+    choice: famous
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: famous
+      target: Arthur Conan Doyle
+      role: 형용사
+    explanation: made의 목적격 보어 자리이므로 형용사 famous가 맞다.
+  - no: 5
+    choice: becoming
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: the professor
+      exists: 없다
+      current: becoming
+      fixed: became
+    explanation: 주어 the professor에 대한 본동사가 없으므로 becoming이 아니라 became이 되어야 한다.

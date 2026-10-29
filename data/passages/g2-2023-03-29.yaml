@@ -1,0 +1,63 @@
+passage_id: g2-2023-03-29
+kind: grammar
+source: 고2 2023년 3월 학평 / 29번
+text: >
+  Human beings like certainty. This liking stems from our ancient ancestors
+  [[1]] needed to survive alongside saber‑toothed tigers and poisonous berries.
+  Our brains evolved to help us attend to threats, keep away from [[2]], and
+  remain alive afterward. In fact, we learned that the more [[3]] we were about
+  something, the better chance we had of making the right choice. Is this berry
+  the same shape as last time? The same size? If I know for certain it [[4]], my
+  brain will direct me to eat it because I know it’s safe. And if I’m uncertain,
+  my brain will send out a danger alert to protect me. The dependence on
+  certainty all those millennia ago ensured our survival to the present day, and
+  the danger‑alert system continues to protect us. This is achieved by our
+  brains labeling new, vague, or unpredictable everyday events and experiences
+  as uncertain. Our brains then [[5]] sensations, thoughts, and action plans to
+  keep us safe from the uncertain element, and we live to see another day.
+items:
+  - no: 1
+    choice: who
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: who
+    explanation: 선행사 our ancient ancestors(사람)를 받고 뒤의 절에 주어가 없으므로 주격 관계대명사 who가 맞다.
+  - no: 2
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: threats
+      number: 복수
+    explanation: them은 앞의 복수 명사 threats를 가리키므로 맞다.
+  - no: 3
+    choice: certain
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: certain
+      target: we
+      role: 형용사
+    explanation: the more 비교 구문에서 were의 보어 자리이므로 형용사 certain이 맞다.
+  - no: 4
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: it
+      number: 단수
+      verb: is
+    explanation: 주어 it(berry)이 단수이고 is (the same)를 대신하므로 is가 맞다.
+  - no: 5
+    choice: generating
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: Our brains
+      exists: 없다
+      current: generating
+      fixed: generate
+    explanation: 주어 Our brains의 본동사가 없으므로 generating이 아니라 generate가 되어야 한다.

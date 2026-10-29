@@ -1,0 +1,63 @@
+passage_id: g2-2022-11-29
+kind: grammar
+source: 고2 2022년 11월 학평 / 29번
+text: >
+  Pre-emption means that a strategy is designed to prevent a rival from starting
+  some particular activity. In some case a pre-emptive move may simply be an
+  announcement of some intent [[1]] might discourage rivals from doing the same.
+  The idea of pre-emption implies that timing is sometimes very important—a
+  decision or an action at one point in time might be much more rewarding than
+  [[2]] it at a different time point. Pre-emption may involve up-weighting
+  advertising for a period before and during [[3]] a new entrant launches into a
+  market. The intent is to make it more difficult for the new entrant’s
+  advertising to make an impression on potential buyers. Product proliferation
+  is another potential pre-emption strategy. The general idea is to launch a
+  large variety of product variants so that there is very little in the way of
+  market demand that [[4]] not accommodated. Arguably, if a market is already
+  filled with product variants it is more difficult for competitors to find
+  [[5]] pockets of market demand.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 some intent를 받고 뒤의 절에 주어가 빠진 불완전한 절이므로 주격 관계대명사 that이 맞다.
+  - no: 2
+    choice: doing
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: than
+      pair: an action과 doing it
+      word: doing
+    explanation: than 앞의 명사 a decision or an action과 비교되는 대상이므로 동명사 doing이 맞다.
+  - no: 3
+    choice: when
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: when
+    explanation: 전치사 during의 목적어로 선행사가 생략된 관계부사절을 이끌고 뒤에 완전한 절이 오므로 when이 맞다.
+  - no: 4
+    choice: are
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: market demand
+      number: 단수
+      current: are
+      fixed: is
+    explanation: 관계대명사 that의 선행사 market demand가 단수이므로 are가 아니라 is가 되어야 한다.
+  - no: 5
+    choice: untapped
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: pockets
+      relation: 수동
+      word: untapped
+    explanation: "pockets of market demand가 '개발되지 않은' 수동 관계이므로 과거분사 untapped가 맞다."

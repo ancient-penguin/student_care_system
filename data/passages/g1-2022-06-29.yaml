@@ -1,0 +1,60 @@
+passage_id: g1-2022-06-29
+kind: grammar
+source: 고1 2022년 6월 학평 / 29번
+text: >
+  Despite all the high-tech devices that seem to deny the need for paper, paper
+  use in the United States [[1]] nearly doubled recently. We now consume more
+  paper than ever: 400 million tons globally and growing. Paper is not the only
+  resource [[2]] we are using more of. Technological advances often come with
+  the promise of [[3]] fewer materials. However, the reality is that they have
+  historically caused more materials use, making us [[4]] on more natural
+  resources. The world now consumes far more “stuff” than it ever has. We use
+  twenty-seven times more industrial minerals, such as gold, copper, and rare
+  metals, than we [[5]] just over a century ago. We also each individually use
+  more resources. Much of that is due to our high-tech lifestyle.
+items:
+  - no: 1
+    choice: has
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: paper use
+      number: 단수
+      verb: has
+    explanation: 주어는 United States가 아니라 paper use이므로 단수 동사 has가 맞다.
+  - no: 2
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 the only resource를 수식하며 뒤의 절(we are using more of)에 전치사 of의 목적어가 빠져 있으므로 관계대명사 that이 맞다.
+  - no: 3
+    choice: using
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: of
+      form: 동명사
+      word: using
+    explanation: 전치사 of의 목적어 자리이므로 동명사 using이 맞다.
+  - no: 4
+    choice: dependently
+    is_correct: false
+    tag: 형용사·부사
+    model_slots:
+      current: dependently
+      target: us
+      role: 형용사
+      fixed: dependent
+    explanation: make의 목적격보어 자리에는 형용사가 와야 하므로 dependently가 아니라 dependent가 되어야 한다.
+  - no: 5
+    choice: did
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: we
+      number: 복수
+      verb: did
+    explanation: 앞의 일반동사 use를 대신하고 a century ago라는 과거 시점을 나타내므로 대동사 did가 맞다.

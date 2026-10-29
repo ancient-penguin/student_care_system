@@ -1,0 +1,49 @@
+passage_id: g2-2022-09-29
+kind: grammar
+source: 고2 2022년 9월 학평 / 29번
+text: >
+  By noticing the relation between their own actions and resultant external
+  changes, infants develop self‐efficacy, a sense [[1]] they are agents of the
+  perceived changes. Although infants can notice the effect of their behavior
+  on the physical environment, it is in early social interactions that infants
+  most [[2]] perceive the consequence of their actions. People have perceptual
+  characteristics that virtually [[3]] that infants will orient toward them.
+  They have visually contrasting and moving faces. They produce sound, provide
+  touch, and have interesting smells. In addition, people engage with infants
+  by exaggerating their facial expressions and inflecting their voices in ways
+  that infants find [[4]]. But most importantly, these antics are responsive
+  to infants’ vocalizations, facial expressions, and gestures; people vary the
+  pace and level of their behavior in response to infant actions.
+  Consequentially, early social interactions provide a context [[5]] infants
+  can easily notice the effect of their behavior.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: a sense의 내용을 설명하는 완전한 절을 이끄는 동격의 접속사이므로 that이 맞다.
+  - no: 2
+    choice: readily
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: readily, target: perceive, role: 부사 }
+    explanation: 동사 perceive를 수식하는 부사이므로 readily가 맞다.
+  - no: 3
+    choice: assure
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: perceptual characteristics(선행사), number: 복수, verb: assure }
+    explanation: 주격 관계대명사 that의 선행사 perceptual characteristics가 복수이므로 assure가 맞다.
+  - no: 4
+    choice: fascinated
+    is_correct: false
+    tag: 분사
+    model_slots: { noun: ways, relation: 능동, current: fascinated, fixed: fascinating }
+    explanation: find의 목적어(that = ways)가 매혹을 느끼게 하는 능동 관계이므로 fascinated가 아니라 fascinating이 되어야 한다.
+  - no: 5
+    choice: where
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 완전, word: where }
+    explanation: 선행사 a context 뒤에 완전한 절이 이어지므로 관계부사 where가 맞다.

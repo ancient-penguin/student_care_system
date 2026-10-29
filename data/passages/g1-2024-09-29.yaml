@@ -1,0 +1,48 @@
+passage_id: g1-2024-09-29
+kind: grammar
+source: 고1 2024년 9월 학평 / 29번
+text: >
+  From an organizational viewpoint, one of the most fascinating examples of
+  how any organization may contain many different types of culture [[1]] to
+  recognize the functional operations of different departments within the
+  organization. The varying departments and divisions within an organization
+  will inevitably view any given situation from their own biased and
+  prejudiced perspective. A department and its members will acquire “tunnel
+  vision” which disallows them to see things as others see [[2]]. The very
+  structure of organizations can create conflict. The choice of [[3]] the
+  structure is “mechanistic” or “organic” can have a profound influence on
+  conflict management. A mechanistic structure has a vertical hierarchy with
+  many rules, many procedures, and many levels of management [[4]] in decision
+  making. Organic structures are more horizontal in nature, [[5]] decision
+  making is less centralized and spread across the plane of the organization.
+items:
+  - no: 1
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: one of the most fascinating examples, number: 단수, verb: is }
+    explanation: 주어의 핵심은 one이므로 단수 동사 is가 맞다.
+  - no: 2
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: them, referent: things, number: 복수 }
+    explanation: see의 목적어로 앞의 복수 명사 things를 가리키므로 them이 맞다.
+  - no: 3
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: whether }
+    explanation: 전치사 of의 목적어로 ‘~인지 아닌지’의 명사절을 이끌고 뒤에 or가 이어지므로 whether가 맞다.
+  - no: 4
+    choice: involved
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: many levels of management, relation: 수동, word: involved }
+    explanation: 관리 단계들이 의사 결정에 관여되는 수동 관계이므로 과거분사 involved가 맞다.
+  - no: 5
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots: { completeness: 완전, current: which, fixed: where }
+    explanation: 뒤의 절(decision making is less centralized ...)이 완전하므로 which가 아니라 where가 되어야 한다.

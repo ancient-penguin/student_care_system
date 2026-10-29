@@ -1,0 +1,60 @@
+passage_id: g1-2025-06-29
+kind: grammar
+source: 고1 2025년 6월 학평 / 29번
+text: >
+  Studies of experts provide insight into [[1]] it means to have deep and
+  flexible understanding. Experts in a particular domain are people who have
+  deep, richly interconnected ideas about the world. They are not just good
+  thinkers or people who are [[2]] smart. Rather, experts [[3]] knowledge in a
+  specific domain—such as chess, chemistry, or tennis—and are not generalists.
+  However, experts do not just know “a bunch of facts.” In fact, having
+  expertise in a topic means [[4]] knowledge is organized into coherent
+  frameworks, and the expert understands the inter-relationship between facts
+  and can distinguish which ideas are most central. This kind of deep but
+  organized understanding allows for greater flexibility in learning and [[5]]
+  application across multiple contexts.
+items:
+  - no: 1
+    choice: what
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: what
+    explanation: 전치사 into의 목적어 자리이고 뒤의 절(it means ...)에 means의 목적어가 빠져 있으므로 what이 맞다.
+  - no: 2
+    choice: exceptionally
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: exceptionally
+      target: smart
+      role: 부사
+    explanation: 형용사 smart를 수식하는 자리이므로 부사 exceptionally가 맞다.
+  - no: 3
+    choice: having
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: experts
+      exists: 없다
+      current: having
+      fixed: have
+    explanation: 주어 experts의 본동사가 없고 and 뒤의 are와 병렬을 이루어야 하므로 having이 아니라 have가 되어야 한다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: means의 목적어 자리에 완전한 절(knowledge is organized ...)이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 5
+    choice: facilitates
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: allows와 facilitates
+      word: facilitates
+    explanation: 주어 This kind of ... understanding의 동사 allows와 and로 병렬되므로 facilitates가 맞다.

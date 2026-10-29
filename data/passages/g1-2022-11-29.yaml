@@ -1,0 +1,62 @@
+passage_id: g1-2022-11-29
+kind: grammar
+source: 고1 2022년 11월 학평 / 29번
+text: >
+  You may have seen headlines in the news about some of the things machines
+  powered by artificial intelligence can do. However, if you were to consider
+  all the tasks [[1]] AI-powered machines could actually perform, it would be
+  quite mind-blowing! One of the key features of artificial intelligence [[2]]
+  that it enables machines to learn new things, rather than requiring
+  programming specific to new tasks. Therefore, the core difference between
+  computers of the future and [[3]] of the past is that future computers will be
+  able to learn and self-improve. In the near future, smart virtual assistants
+  will know more about you than your closest friends and family members [[4]].
+  Can you imagine how that might change our lives? These kinds of changes are
+  exactly why it is so important [[5]] the implications that new technologies
+  will have for our world.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 all the tasks를 수식하고 뒤의 절에 perform의 목적어가 빠진 불완전한 절이므로 목적격 관계대명사 that이 맞다.
+  - no: 2
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: One of the key features
+      number: 단수
+      verb: is
+    explanation: 주어는 features가 아니라 One이므로 단수 동사 is가 맞다.
+  - no: 3
+    choice: those
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: those
+      referent: computers
+      number: 복수
+    explanation: 앞의 복수 명사 computers를 가리키므로 복수 대명사 those가 맞다.
+  - no: 4
+    choice: are
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: your closest friends and family members
+      number: 복수
+      current: are
+      fixed: do
+    explanation: 앞의 일반동사 know를 대신하는 대동사 자리이므로 are가 아니라 do가 되어야 한다.
+  - no: 5
+    choice: to recognize
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 가주어 it
+      form: to부정사
+      word: to recognize
+    explanation: 가주어 it에 대응하는 진주어 자리이므로 to부정사 to recognize가 맞다.

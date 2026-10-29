@@ -1,0 +1,62 @@
+passage_id: g1-2023-06-29
+kind: grammar
+source: 고1 2023년 6월 학평 / 29번
+text: >
+  Although praise is one of the most powerful tools available for improving
+  young children’s behavior, it is equally powerful for improving your child’s
+  self-esteem. Preschoolers believe what their parents tell [[1]] in a very
+  profound way. They do not yet have the cognitive sophistication to reason
+  [[2]] and reject false information. If a preschool boy consistently hears from
+  his mother [[3]] he is smart and a good helper, he is likely to incorporate
+  that information into his self-image. Thinking of himself as a boy who is
+  smart and knows how to do things [[4]] likely to make him endure longer in
+  problem-solving efforts and increase his confidence in trying new and
+  difficult tasks. Similarly, thinking of himself as the kind of boy who is a
+  good helper will make him more likely to volunteer [[5]] with tasks at home
+  and at preschool.
+items:
+  - no: 1
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: Preschoolers
+      number: 복수
+    explanation: tell의 목적어로 복수 명사 Preschoolers를 가리키므로 them이 맞다.
+  - no: 2
+    choice: analytically
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: analytically
+      target: reason
+      role: 부사
+    explanation: 동사 reason을 수식하는 자리이므로 부사 analytically가 맞다.
+  - no: 3
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: hears의 목적어 자리에 완전한 절(he is smart ...)이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 4
+    choice: being
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: Thinking of himself ~ things
+      exists: 없다
+      current: being
+      fixed: is
+    explanation: 동명사구 주어 Thinking of himself ... things에 대한 본동사가 없으므로 being이 아니라 is가 되어야 한다.
+  - no: 5
+    choice: to help
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: volunteer
+      form: to부정사
+      word: to help
+    explanation: volunteer는 to부정사를 목적어로 취하므로 to help가 맞다.

@@ -1,0 +1,62 @@
+passage_id: g1-2026-06-29
+kind: grammar
+source: 고1 2026년 6월 학평 / 29번
+text: >
+  Literature, in its essence, is a testament to the enduring power of human
+  creativity and expression. It transcends time and space, [[1]] us with the
+  thoughts and emotions of people from all walks of life, across centuries and
+  cultures. [[2]] the rise of new technologies and the ever-changing landscape
+  of media, literature has retained its relevance and significance as a timeless
+  art form. One reason for literature’s enduring power is its ability to capture
+  and [[3]] the complexities of the human experience. Through the written word,
+  authors [[4]] the unique ability to explore the depths of human emotion, the
+  nuances of relationships, and the challenges and triumphs of the human spirit.
+  Literature allows us to see ourselves [[5]] in the pages of a book, to
+  empathize with characters different from ourselves, and to gain a deeper
+  understanding of the human condition.
+items:
+  - no: 1
+    choice: connecting
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: It(Literature)
+      relation: 능동
+      word: connecting
+    explanation: 의미상 주어 It(Literature)이 우리를 '연결하는' 능동 관계의 분사구문이므로 connecting이 맞다.
+  - no: 2
+    choice: Despite
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 전치사
+      word: Despite
+    explanation: 뒤에 절이 아닌 명사구(the rise of ...)가 이어지므로 전치사 Despite가 맞다.
+  - no: 3
+    choice: convey
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: capture와 convey
+      word: convey
+    explanation: to 뒤의 capture와 and로 병렬되는 동사원형이므로 convey가 맞다.
+  - no: 4
+    choice: having
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: authors
+      exists: 없다
+      current: having
+      fixed: have
+    explanation: 주어 authors의 본동사가 없으므로 having이 아니라 have가 되어야 한다.
+  - no: 5
+    choice: reflected
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: ourselves
+      relation: 수동
+      word: reflected
+    explanation: 목적어 ourselves가 책 속에 '비춰지는' 수동 관계이므로 목적격보어로 과거분사 reflected가 맞다.

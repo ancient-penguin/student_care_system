@@ -1,0 +1,60 @@
+passage_id: g3-2025-csat-29
+kind: grammar
+source: 2025학년도 수능 / 29번
+text: >
+  Think of yourself. When you decide to get up and get a drink of water, for
+  example, you don’t consciously organize or consider the host of steps
+  involved. Imagine if we [[1]] to consider every single muscle that needed to
+  be contracted or relaxed just to stand up and walk. It would be tiresome and
+  very slow ― as patients recovering from a brain injury affecting the motor
+  system [[2]]. The autopilot parts of our brain do it for us automatically,
+  [[3]] up our conscious mind for more important jobs. It is the older parts of
+  our brain [[4]] support these automatic processes that allow us to move, hear,
+  see, and use many of our social skills. More recently evolved abilities like
+  talking, reading, and writing are far less automated. So, most of the time,
+  [[5]] you are perceiving, feeling, or thinking is based on a very crude and
+  fast analysis that happens completely without your awareness.
+items:
+  - no: 1
+    choice: had
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: we
+      verb: had
+    explanation: Imagine if 뒤에서 현재 사실과 반대되는 상황을 가정하는 가정법 과거이므로 had가 맞다.
+  - no: 2
+    choice: knows
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: patients
+      number: 복수
+      current: knows
+      fixed: know
+    explanation: as절의 주어는 patients로 복수이므로 knows가 아니라 know가 되어야 한다.
+  - no: 3
+    choice: freeing
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: The autopilot parts
+      relation: 능동
+      word: freeing
+    explanation: 의미상 주어 The autopilot parts가 의식을 '자유롭게 하는' 능동 관계의 분사구문이므로 freeing이 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 the older parts of our brain을 수식하며 뒤의 절에 주어가 빠져 있으므로 관계대명사 that이 맞다.
+  - no: 5
+    choice: what
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: what
+    explanation: 선행사가 없고 뒤의 절에 perceiving 등의 목적어가 빠져 있으며 is의 주어 역할을 하므로 what이 맞다.

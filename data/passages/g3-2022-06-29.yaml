@@ -1,0 +1,63 @@
+passage_id: g3-2022-06-29
+kind: grammar
+source: 고3 2022년 6월 모평 / 29번
+text: >
+  Ecosystems differ in composition and extent. They can be defined as ranging
+  from the communities and interactions of organisms in your mouth or [[1]] in
+  the canopy of a rain forest to all those in Earth’s oceans. The processes
+  [[2]] them differ in complexity and speed. There are systems that turn over in
+  minutes, and there are others [[3]] rhythmic time extends to hundreds of
+  years. Some ecosystems are extensive (‘biomes’, such as the African savanna);
+  some cover regions (river basins); many involve clusters of villages
+  (micro-watersheds); others are confined to the level of a single village (the
+  village pond). In each example there is an element of indivisibility. Divide
+  an ecosystem into parts by creating barriers, and the sum of the productivity
+  of the parts will typically be found to be lower than the productivity of the
+  whole, other things [[4]] equal. The mobility of biological populations is a
+  reason. Safe passages, for example, enable migratory species [[5]].
+items:
+  - no: 1
+    choice: those
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: those
+      referent: the communities and interactions
+      number: 복수
+    explanation: 앞의 복수 명사 the communities and interactions를 대신하므로 those가 맞다.
+  - no: 2
+    choice: governing
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: The processes
+      relation: 능동
+      word: governing
+    explanation: "The processes가 생태계를 '지배하는' 능동 관계이므로 현재분사 governing이 맞다."
+  - no: 3
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: which
+      fixed: whose
+    explanation: 뒤의 절(rhythmic time extends ...)이 완전하고 rhythmic time이 others의 것이므로 which가 아니라 소유격 관계대명사 whose가 되어야 한다.
+  - no: 4
+    choice: being
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: other things
+      relation: 능동
+      word: being
+    explanation: "의미상 주어 other things가 있는 독립분사구문이고 '같은 상태인' 능동 관계이므로 being이 맞다."
+  - no: 5
+    choice: to survive
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: enable
+      form: to부정사
+      word: to survive
+    explanation: enable은 목적격 보어로 to부정사를 취하므로 to survive가 맞다.

@@ -1,0 +1,47 @@
+passage_id: g2-2025-09-29
+kind: grammar
+source: 고2 2025년 9월 학평 / 29번
+text: >
+  All human cultures mark the passing of time by the differences they observe
+  in the world around [[1]]. Our choice of which differences to mark [[2]]
+  firstly on what we can observe and secondly on what is important in our
+  lives. How we mark the differences―the shapes of our calendars and our
+  rituals―depends on the connections we make between those two things. In the
+  agricultural society of pre-modern Europe, where higher latitudes make the
+  seasons easily [[3]], it was natural to monitor the solar cycle. Conversely,
+  among the largely nomadic peoples of Arabia, [[4]] seasonal changes were
+  less significant, the lunar calendar was a more sensible choice. That did
+  not make it inevitable that Islam would use a lunar calendar and Roman
+  Christianity a solar one, but political and religious decisions were made
+  from options limited by geography and lifestyle, [[5]] through tradition.
+items:
+  - no: 1
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: them, referent: human cultures, number: 복수 }
+    explanation: 전치사 around의 목적어로 복수 명사 human cultures를 가리키므로 them이 맞다.
+  - no: 2
+    choice: depend
+    is_correct: false
+    tag: 수일치
+    model_slots: { subject: Our choice, number: 단수, current: depend, fixed: depends }
+    explanation: 주어는 Our choice로 단수이므로 depend가 아니라 depends가 되어야 한다.
+  - no: 3
+    choice: observable
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: observable, target: the seasons, role: 형용사 }
+    explanation: make의 목적격보어 자리로 목적어 the seasons를 설명하므로 형용사 observable이 맞다.
+  - no: 4
+    choice: for whom
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 완전, word: for whom }
+    explanation: 선행사 peoples 뒤에 완전한 절이 이어지므로 전치사+관계대명사 for whom이 맞다.
+  - no: 5
+    choice: filtered
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: options, relation: 수동, word: filtered }
+    explanation: 선택지들이 전통을 통해 걸러지는 수동 관계이므로 과거분사 filtered가 맞다.

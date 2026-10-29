@@ -1,0 +1,63 @@
+passage_id: g3-2026-10-29
+kind: grammar
+source: 고3 2026년 10월 학평 / 29번
+text: >
+  Deduction makes us feel safe: If and when we know all the elements of the
+  problem situation and how they hang together, then we can [[1]] deduce the
+  outcome. This is rationality at its most unassailable. In professional
+  practice, this type of thinking expresses itself in the belief [[2]] we can
+  produce “logical” strategies and blueprints, or the claim to base ourselves on
+  “best practices” and “evidence-based interventions.” But this gold standard of
+  pure logic can only be achieved in a closed world, [[3]] we are absolutely
+  sure we know all the elements of the problem situation and completely
+  understand all the relationships at play beforehand. In the real world, this
+  never happens—and when it [[4]], we are talking about quite uninteresting,
+  mechanical, routine reasoning. In practice, all problems are messy. Yet it is
+  tempting [[5]] that we have used deduction in dealing with a problem; this
+  claim to pure rationality is so strong that we don’t even have to defend the
+  result. It is “logical,” after all.
+items:
+  - no: 1
+    choice: confidently
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: confidently
+      target: deduce
+      role: 부사
+    explanation: 동사 deduce를 수식하는 자리이므로 부사 confidently가 맞다.
+  - no: 2
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: the belief의 내용을 설명하는 완전한 절이 이어지는 동격절이므로 접속사 that이 맞다.
+  - no: 3
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: which
+      fixed: where
+    explanation: 선행사 a closed world 뒤의 절이 완전하므로 which가 아니라 관계부사 where(또는 in which)가 되어야 한다.
+  - no: 4
+    choice: does
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: it
+      number: 단수
+      verb: does
+    explanation: 앞의 일반동사 happens를 대신하는 대동사이고 주어 it이 단수이므로 does가 맞다.
+  - no: 5
+    choice: to claim
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 가주어 it
+      form: to부정사
+      word: to claim
+    explanation: 가주어 it에 대응하는 진주어 자리이므로 to부정사 to claim이 맞다.

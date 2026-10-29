@@ -1,0 +1,48 @@
+passage_id: g1-2023-09-29
+kind: grammar
+source: 고1 2023년 9월 학평 / 29번
+text: >
+  There is a reason the title “Monday Morning Quarterback” exists. Just read
+  the comments on social media from fans discussing the weekend’s games, and
+  you quickly see how many people believe they could play, coach, and manage
+  sport teams more [[1]] than those on the field. This goes for the boardroom
+  as well. Students and professionals with years of training and specialized
+  degrees in sport business may also find themselves [[2]] advice on how to do
+  their jobs from friends, family, or even total strangers without any
+  expertise. Executives in sport management [[3]] decades of knowledge and
+  experience in their respective fields. However, many of them face criticism
+  from fans and community members telling [[4]] how to run their business.
+  Very few people tell their doctor how to perform surgery or their accountant
+  how to prepare their taxes, but many people provide feedback on [[5]] sport
+  organizations should be managed.
+items:
+  - no: 1
+    choice: successfully
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: successfully, target: "play, coach, and manage", role: 부사 }
+    explanation: 동사 play, coach, and manage를 수식하는 부사이므로 successfully가 맞다.
+  - no: 2
+    choice: being given
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: themselves, relation: 수동, word: being given }
+    explanation: 목적어 themselves가 조언을 받는 수동 관계이므로 목적격보어로 being given이 맞다.
+  - no: 3
+    choice: have
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: Executives in sport management, number: 복수, verb: have }
+    explanation: 주어 Executives가 복수이므로 have가 맞다.
+  - no: 4
+    choice: themselves
+    is_correct: false
+    tag: 대명사
+    model_slots: { current: themselves, referent: many of them(경영진), number: 복수, fixed: them }
+    explanation: telling의 의미상 주어는 fans and community members이고 목적어는 경영진이므로 재귀대명사가 아닌 them이 되어야 한다.
+  - no: 5
+    choice: how
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 의문사, word: how }
+    explanation: 전치사 on의 목적어로 완전한 절을 이끄는 의문사(어떻게)이므로 how가 맞다.

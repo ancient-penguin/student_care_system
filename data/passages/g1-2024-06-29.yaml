@@ -1,0 +1,62 @@
+passage_id: g1-2024-06-29
+kind: grammar
+source: 고1 2024년 6월 학평 / 29번
+text: >
+  The hunter-gatherer lifestyle, which can [[1]] as “natural” to human beings,
+  appears to have had much to recommend it. Examination of human remains from
+  early hunter-gatherer societies [[2]] suggested that our ancestors enjoyed
+  abundant food, obtainable without excessive effort, and suffered very few
+  diseases. If this is true, it is not clear why so many humans settled in
+  permanent villages and developed agriculture, growing crops and domesticating
+  animals: cultivating fields was hard work, and it was in farming villages
+  [[3]] epidemic diseases first took root. Whatever its immediate effect on the
+  lives of humans, the development of settlements and agriculture [[4]] led to a
+  high increase in population density. This period, known as the New Stone Age,
+  was a major turning point in human development, [[5]] the way to the growth of
+  the first towns and cities, and eventually leading to settled “civilizations.”
+items:
+  - no: 1
+    choice: be described
+    is_correct: true
+    tag: 태(능동·수동)
+    model_slots:
+      subject: which(The hunter-gatherer lifestyle)
+      relation: 수동
+      word: be described
+    explanation: 선행사 The hunter-gatherer lifestyle은 '묘사되는' 대상이므로 수동태 be described가 맞다.
+  - no: 2
+    choice: has
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: Examination
+      number: 단수
+      verb: has
+    explanation: 주어는 human remains가 아니라 Examination이므로 단수 동사 has가 맞다.
+  - no: 3
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: what
+      fixed: that
+    explanation: it was ~ that 강조구문으로 in farming villages를 강조하며 뒤의 절이 완전하므로 what이 아니라 that이 되어야 한다.
+  - no: 4
+    choice: undoubtedly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: undoubtedly
+      target: led
+      role: 부사
+    explanation: 동사 led를 수식하는 자리이므로 부사 undoubtedly가 맞다.
+  - no: 5
+    choice: opening
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: This period
+      relation: 능동
+      word: opening
+    explanation: 주어 This period가 길을 '여는' 능동 관계의 분사구문이므로 opening이 맞다.

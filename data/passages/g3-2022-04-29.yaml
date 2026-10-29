@@ -1,0 +1,50 @@
+passage_id: g3-2022-04-29
+kind: grammar
+source: 고3 2022년 4월 학평 / 29번
+text: >
+  The actual problems with monopolies are caused by statism, not capitalism.
+  Under a statist social system, taxes, subsidies, tariffs, and regulations
+  often serve to protect existing large players in the marketplace. Those
+  players often use crony tactics to retain or expand the protections: a new
+  tariff preventing foreign competition, a subsidy making it harder for new
+  players [[1]] with them, or a regulatory measure that a large company has
+  the resources to comply with. Under a capitalist social system, on the other
+  hand, the government has no say in how [[2]] a company may become in its
+  industry or how companies take over and merge with one another. Furthermore,
+  a capitalist society doesn’t have rights-violating taxes, tariffs,
+  subsidies, or regulations [[3]] anybody nor does it have antitrust laws.
+  Under capitalism, dominance can only be achieved by becoming really good at
+  [[4]] you’re doing. And to maintain dominance, you have to continue to stay
+  ahead of the competition, which sees your dominance and profits as a sign
+  [[5]] there is money to be made by others as well.
+items:
+  - no: 1
+    choice: to compete
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: 가목적어 it, form: to부정사, word: to compete }
+    explanation: 가목적어 it의 진목적어 자리이므로 to부정사 to compete가 맞다.
+  - no: 2
+    choice: dominantly
+    is_correct: false
+    tag: 형용사·부사
+    model_slots: { current: dominantly, target: a company, role: 형용사, fixed: dominant }
+    explanation: become의 보어 자리로 주어 a company를 설명하므로 부사 dominantly가 아니라 형용사 dominant가 되어야 한다.
+  - no: 3
+    choice: favoring
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: regulations, relation: 능동, word: favoring }
+    explanation: 규제들이 누군가를 편드는 능동 관계이므로 현재분사 favoring이 맞다.
+  - no: 4
+    choice: what
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 불완전, word: what }
+    explanation: 전치사 at 뒤에 선행사가 없고 doing의 목적어가 빠진 불완전한 절이 이어지므로 what이 맞다.
+  - no: 5
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: a sign의 내용을 설명하는 완전한 절을 이끄는 동격의 접속사이므로 that이 맞다.

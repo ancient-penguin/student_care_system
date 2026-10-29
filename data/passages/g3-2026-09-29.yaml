@@ -1,0 +1,49 @@
+passage_id: g3-2026-09-29
+kind: grammar
+source: 고3 2026년 9월 모평 / 29번
+text: >
+  Leaders come in all shapes and sizes, but successful leaders tend to have
+  one thing in common: the ability to share someone else’s feelings, known as
+  empathy. While empathy forms in everyone to some degree, effective leaders
+  know how to develop this emotional guidance system [[1]] with others’
+  feelings and perspectives. However, empathy in leaders is more than [[2]]
+  being kind to employees, clients, and customers. Empathetic people seem more
+  approachable, focusing on the words of others. Listening to the needs of
+  employees [[3]] leaders to clearly identify what makes them feel heard.
+  Utilized in this way, empathy can be considered a crucial part of [[4]]
+  employee satisfaction. Leaders who are unable to surround themselves with
+  competent employees will not be successful. Indeed, a leader’s failure to
+  empathize with talented workers is one of the main situations [[5]] could
+  lead them to leave an organization. In this case, the organization must
+  spend precious time and money to find suitable replacements for them.
+items:
+  - no: 1
+    choice: to connect
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: develop this system, form: to부정사, word: to connect }
+    explanation: "‘~하기 위해’라는 목적을 나타내는 to부정사이므로 to connect가 맞다."
+  - no: 2
+    choice: simply
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: simply, target: being kind, role: 부사 }
+    explanation: 동명사구 being kind를 수식하는 부사이므로 simply가 맞다.
+  - no: 3
+    choice: enable
+    is_correct: false
+    tag: 수일치
+    model_slots: { subject: Listening to the needs of employees, number: 단수, current: enable, fixed: enables }
+    explanation: 주어는 동명사구 Listening ... employees로 단수이므로 enable이 아니라 enables가 되어야 한다.
+  - no: 4
+    choice: maintaining
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: 전치사 of, form: 동명사, word: maintaining }
+    explanation: 전치사 of의 목적어 자리이므로 동명사 maintaining이 맞다.
+  - no: 5
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 불완전, word: that }
+    explanation: 선행사 situations 뒤에 주어가 빠진 불완전한 절이 이어지므로 주격 관계대명사 that이 맞다.

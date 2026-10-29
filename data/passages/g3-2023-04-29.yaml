@@ -1,0 +1,66 @@
+passage_id: g3-2023-04-29
+kind: grammar
+source: 고3 2023년 4월 학평 / 29번
+text: >
+  Providing feedback to students is a critical task of teachers. General
+  psychology has shown that knowledge of results is necessary for improving a
+  skill. Advanced musicians are able to self-critique their performances, but
+  developing music students [[1]] on teachers to supply evaluative feedback. The
+  most constructive feedback is that [[2]] expresses the discrepancies between a
+  student’s performance of a piece of music and an optimal version. Expert
+  teachers give more detailed feedback than general appraisals, and music
+  educators generally recognize that more specific teacher feedback facilitates
+  student performance improvement. Researchers also have explored [[3]] the
+  feedback of effective teachers is more often positively or negatively
+  expressed, that is, constituting praise or criticism. One might intuitively
+  think that positive comments are more [[4]] to students and, as a result, are
+  more associated with effective teaching. The research, however, paints a
+  slightly different picture. Although positive feedback is [[5]] more helpful
+  with younger learners and in one-on-one instruction, more advanced music
+  students seem to accept and benefit from greater levels of criticism in
+  lessons.
+items:
+  - no: 1
+    choice: rely
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: developing music students
+      number: 복수
+      verb: rely
+    explanation: 주어 developing music students가 복수이므로 rely가 맞다.
+  - no: 2
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: which
+    explanation: 대명사 that을 선행사로 받고 뒤의 절에 주어가 빠진 불완전한 절이므로 주격 관계대명사 which가 맞다.
+  - no: 3
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: whether
+    explanation: "explored의 목적어 자리에 '~인지 아닌지'의 뜻으로 완전한 절을 이끄므로 whether가 맞다."
+  - no: 4
+    choice: motivated
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: positive comments
+      relation: 능동
+      current: motivated
+      fixed: motivating
+    explanation: "긍정적인 말이 학생들에게 동기를 '부여하는' 능동 관계이므로 motivated가 아니라 motivating이 되어야 한다."
+  - no: 5
+    choice: likely
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: likely
+      target: more helpful
+      role: 부사
+    explanation: "likely는 '아마'라는 뜻의 부사로 more helpful을 수식할 수 있으므로 맞다."

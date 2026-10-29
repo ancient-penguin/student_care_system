@@ -1,0 +1,63 @@
+passage_id: g3-2023-06-29
+kind: grammar
+source: 고3 2023년 6월 모평 / 29번
+text: >
+  Consider The Wizard of Oz as a psychological study of motivation. Dorothy and
+  her three friends work hard to get to the Emerald City, overcoming barriers,
+  persisting against all adversaries. They do so because they expect the Wizard
+  to give [[1]] what they are missing. Instead, the wonderful (and wise) Wizard
+  makes them aware that they, not he, always had the power [[2]] their wishes.
+  For Dorothy, home is not a place but a feeling of security, of comfort with
+  people she loves; it is wherever her heart is. The courage the Lion wants, the
+  intelligence the Scarecrow longs for, and the emotions the Tin Man dreams of
+  [[3]] attributes they already possess. They need to think about these
+  attributes not as internal conditions but as positive ways [[4]] they are
+  already relating to others. After all, didn’t they demonstrate those qualities
+  on the journey to Oz, a journey [[5]] by little more than an expectation, an
+  idea about the future likelihood of getting something they wanted?
+items:
+  - no: 1
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: Dorothy and her three friends
+      number: 복수
+    explanation: 주어 the Wizard와 다른 대상인 복수의 Dorothy and her three friends를 가리키므로 them이 맞다.
+  - no: 2
+    choice: to fulfill
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: power
+      form: to부정사
+      word: to fulfill
+    explanation: 명사 the power를 수식하는 to부정사이므로 to fulfill이 맞다.
+  - no: 3
+    choice: being
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: The courage, the intelligence, and the emotions
+      exists: 없다
+      current: being
+      fixed: are
+    explanation: 주어 The courage ..., the intelligence ..., and the emotions ...의 본동사가 없으므로 being이 아니라 복수 동사 are가 되어야 한다.
+  - no: 4
+    choice: in which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: in which
+    explanation: 선행사 positive ways를 받고 뒤에 완전한 절이 오므로 전치사+관계대명사 in which가 맞다.
+  - no: 5
+    choice: motivated
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: a journey
+      relation: 수동
+      word: motivated
+    explanation: 여정이 기대에 의해 '동기 부여된' 것이므로 수동의 과거분사 motivated가 맞다.

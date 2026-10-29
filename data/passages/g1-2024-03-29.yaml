@@ -1,0 +1,63 @@
+passage_id: g1-2024-03-29
+kind: grammar
+source: 고1 2024년 3월 학평 / 29번
+text: >
+  It would be hard to overstate how important meaningful work is to human
+  beings—work [[1]] provides a sense of fulfillment and empowerment. Those who
+  have found deeper meaning in their careers find their days much more
+  energizing and satisfying, and [[2]] their employment as one of their greatest
+  sources of joy and pride. Sonya Lyubomirsky, professor of psychology at the
+  University of California, has conducted numerous workplace studies [[3]] that
+  when people are more fulfilled on the job, they not only produce higher
+  quality work and a greater output, but also generally earn higher incomes.
+  Those most satisfied with their work [[4]] also much more likely to be happier
+  with their lives overall. For her book Happiness at Work, researcher Jessica
+  Pryce-Jones conducted a study of 3,000 workers in seventy-nine countries,
+  [[5]] that those who took greater satisfaction from their work were 150
+  percent more likely to have a happier life overall.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 work를 받고 뒤의 절에 주어가 없으므로 주격 관계대명사 that이 맞다.
+  - no: 2
+    choice: to count
+    is_correct: false
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: 본동사 find와 count
+      current: to count
+      fixed: count
+    explanation: and 앞의 본동사 find와 병렬되어 주어 Those의 동사가 되어야 하므로 to count가 아니라 count가 되어야 한다.
+  - no: 3
+    choice: showing
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: workplace studies
+      relation: 능동
+      word: showing
+    explanation: 연구가 결과를 '보여주는' 능동 관계이므로 현재분사 showing이 맞다.
+  - no: 4
+    choice: are
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: Those most satisfied with their work
+      number: 복수
+      verb: are
+    explanation: 주어 Those(~한 사람들)는 복수이므로 are가 맞다.
+  - no: 5
+    choice: finding
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: researcher Jessica Pryce-Jones
+      relation: 능동
+      word: finding
+    explanation: 주어인 연구자가 '알아낸' 것이므로 능동의 분사구문 finding이 맞다.

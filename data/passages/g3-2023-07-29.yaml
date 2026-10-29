@@ -1,0 +1,64 @@
+passage_id: g3-2023-07-29
+kind: grammar
+source: 고3 2023년 7월 학평 / 29번
+text: >
+  The intelligence of monkeys pales in comparison with that of our closest
+  relatives, the great apes: orangutans, gorillas, chimpanzees, and bonobos,
+  whose brains are twice as [[1]] relative to their body weight. Most
+  primatologists believe the apes acquired their larger brains to help them
+  communicate with and [[2]] their peers. And they certainly do exhibit complex
+  social interactions within their group; they seem capable of feeling empathy,
+  have a self-image, and exhibit a degree of consciousness as they can recognize
+  [[3]] in a mirror. But this “social hypothesis” does not explain why it was
+  the great apes that became so clever, rather than monkeys or a group of
+  terrestrial mammals. Nor does it explain why orangutans, who seldom encounter
+  their neighbors, [[4]] so intelligent. It seems likely that some other factor
+  must have been in play [[5]] caused apes to become more intelligent in the
+  first place, and which could subsequently have enabled some members of the
+  group to develop high-level sociality.
+items:
+  - no: 1
+    choice: large
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: large
+      target: brains
+      role: 형용사
+    explanation: be동사 are의 보어 자리(twice as ~ as)이므로 형용사 large가 맞다.
+  - no: 2
+    choice: manipulate
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: communicate와 manipulate
+      word: manipulate
+    explanation: to 뒤의 communicate와 and로 병렬되는 동사원형이므로 manipulate가 맞다.
+  - no: 3
+    choice: themselves
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: themselves
+      referent: they(the great apes)
+      number: 복수
+    explanation: recognize의 목적어가 주어 they와 같으므로 재귀대명사 themselves가 맞다.
+  - no: 4
+    choice: being
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: orangutans
+      exists: 없다
+      current: being
+      fixed: are
+    explanation: why절의 주어 orangutans에 대한 본동사가 없으므로 being이 아니라 are가 되어야 한다.
+  - no: 5
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 some other factor를 수식하며 뒤의 절에 주어가 빠져 있으므로 관계대명사 that이 맞다.

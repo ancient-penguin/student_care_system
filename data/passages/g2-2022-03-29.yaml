@@ -1,0 +1,65 @@
+passage_id: g2-2022-03-29
+kind: grammar
+source: 고2 2022년 3월 학평 / 29번
+text: >
+  Despite abundant warnings that we shouldn’t measure ourselves against others,
+  most of us still do. We’re not only meaning-seeking creatures but social [[1]]
+  as well, constantly making interpersonal comparisons to evaluate ourselves,
+  improve our standing, and enhance our self-esteem. But the problem with social
+  comparison is that it often backfires. When comparing ourselves to someone
+  who’s doing better than we are, we often feel [[2]] for not doing as well.
+  This sometimes leads to what psychologists call malignant envy, the desire for
+  someone [[3]] with misfortune (“I wish she didn’t have what she has”). Also,
+  comparing ourselves with someone who’s doing worse than we are [[4]] scorn,
+  the feeling that others are something undeserving of our beneficence (“She’s
+  beneath my notice”). Then again, comparing ourselves to others can also lead
+  to benign envy, the longing to reproduce someone else’s accomplishments
+  without wishing them ill (“I wish I had what she has”), [[5]] has been shown
+  in some circumstances to inspire and motivate us to increase our efforts in
+  spite of a recent failure.
+items:
+  - no: 1
+    choice: ones
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: ones
+      referent: creatures
+      number: 복수
+    explanation: ones는 앞의 복수 명사 creatures를 가리키므로 맞다.
+  - no: 2
+    choice: inadequate
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: inadequate
+      target: we
+      role: 형용사
+    explanation: feel의 주격보어 자리이므로 형용사 inadequate가 맞다.
+  - no: 3
+    choice: to meet
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: desire
+      form: to부정사
+      word: to meet
+    explanation: 명사 desire를 수식하는 to부정사이고 for someone이 의미상 주어이므로 to meet가 맞다.
+  - no: 4
+    choice: risk
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: comparing ourselves with someone ...
+      number: 단수
+      current: risk
+      fixed: risks
+    explanation: 주어는 동명사구 comparing ourselves ...이므로 단수로 취급해 risk가 아니라 risks가 되어야 한다.
+  - no: 5
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: which
+    explanation: 선행사 benign envy를 받는 계속적 용법이고 뒤의 절에 주어가 없으므로 which가 맞다.

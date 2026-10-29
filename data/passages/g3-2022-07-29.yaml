@@ -1,0 +1,63 @@
+passage_id: g3-2022-07-29
+kind: grammar
+source: 고3 2022년 7월 학평 / 29번
+text: >
+  The spider chart, also called a radar chart, is a form of line graph. It helps
+  the researcher to represent their data in a chart [[1]] shows the relative
+  size of a response on one scale for interrelated variables. Like the bar
+  chart, the data needs to have one scale which is common to all variables. The
+  spider chart is drawn with the variables spanning the chart, [[2]] a spider
+  web. An example of this is seen in a research study looking at self-reported
+  confidence in year 7 students across a range of subjects [[3]] in their first
+  term in secondary school. The researcher takes the responses from a sample
+  group and [[4]] the mean to plot on the spider chart. The spider chart allows
+  the researcher to easily compare and contrast the confidence level in
+  different subjects for the sample group. The chart, like the pie chart, can
+  then be broken down for different groups of students within the study [[5]]
+  further analysis of findings.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 a chart를 받고 뒤의 절에 주어가 없으므로 주격 관계대명사 that이 맞다.
+  - no: 2
+    choice: creating
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: The spider chart
+      relation: 능동
+      word: creating
+    explanation: 차트가 거미줄 모양을 '만들어 내는' 능동 관계의 분사구문이므로 creating이 맞다.
+  - no: 3
+    choice: have taught
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: subjects
+      relation: 수동
+      current: have taught
+      fixed: taught
+    explanation: 과목은 '가르쳐지는' 것이고 문장에 이미 본동사가 있으므로 have taught가 아니라 subjects를 수식하는 과거분사 taught가 되어야 한다.
+  - no: 4
+    choice: calculates
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: takes와 calculates
+      word: calculates
+    explanation: and 앞의 본동사 takes와 병렬되어 주어 The researcher의 동사가 되므로 calculates가 맞다.
+  - no: 5
+    choice: to elicit
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 목적(~하기 위해)
+      form: to부정사
+      word: to elicit
+    explanation: "'더 많은 분석 결과를 끌어내기 위해'라는 목적을 나타내므로 to부정사 to elicit가 맞다."

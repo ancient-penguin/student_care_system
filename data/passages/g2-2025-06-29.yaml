@@ -1,0 +1,62 @@
+passage_id: g2-2025-06-29
+kind: grammar
+source: 고2 2025년 6월 학평 / 29번
+text: >
+  In art, there are a number of ways to use perspective to obtain the illusion
+  of depth, including using colors and graduated values of black and white, and
+  [[1]] drawing the subject by applying the rules of the geometric system of
+  perspective. In order to achieve perspective, you must make a number of
+  observations. The forms or objects that you draw on a flat surface actually
+  [[2]] depth and dimension in real life. As you view them and place their
+  shapes and forms on a drawing surface, [[3]] to represent that depth to make
+  the objects appear realistic and three‐ dimensional. Objects appear
+  differently when [[4]] from various positions. Because of this, it’s important
+  to establish the viewpoint, and stick with [[5]]. When observing a subject,
+  you see depth and three dimensions. When you draw this subject onto a flat
+  surface as it appears to the eye, you are drawing in perspective.
+items:
+  - no: 1
+    choice: accurately
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: accurately
+      target: drawing
+      role: 부사
+    explanation: 동명사 drawing을 수식하는 자리이므로 부사 accurately가 맞다.
+  - no: 2
+    choice: has
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: The forms or objects
+      number: 복수
+      current: has
+      fixed: have
+    explanation: 주어는 The forms or objects로 복수이므로 has가 아니라 have가 되어야 한다.
+  - no: 3
+    choice: try
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: 생략된 you(명령문)
+      verb: try
+    explanation: As 부사절 뒤에 오는 주절의 명령문 동사원형이므로 try가 맞다.
+  - no: 4
+    choice: viewed
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: Objects
+      relation: 수동
+      word: viewed
+    explanation: Objects가 여러 위치에서 '보여지는' 수동 관계이므로 when 뒤의 과거분사 viewed가 맞다.
+  - no: 5
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: it
+      referent: the viewpoint
+      number: 단수
+    explanation: 단수 명사 the viewpoint를 가리키므로 it이 맞다.

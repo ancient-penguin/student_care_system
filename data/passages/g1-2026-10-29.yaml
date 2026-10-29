@@ -1,0 +1,64 @@
+passage_id: g1-2026-10-29
+kind: grammar
+source: 고1 2026년 10월 학평 / 29번
+text: >
+  Since hydra and the immortal jellyfish don’t exhibit obvious signs of aging,
+  they are often called biologically immortal. This doesn’t mean they don’t die.
+  Nor does it even [[1]] that they cannot die of biological causes. But, unlike
+  most every animal, their likelihood of dying does not increase with age.
+  Species such as hydra and the immortal jellyfish excite gerontologists because
+  they may provide clues about how to defeat the aging process. But their
+  property of being able to regenerate entire body parts, or even a whole
+  organism, [[2]] them more similar to trees than to us. Although we may learn
+  some fascinating things about their lack of apparent aging, it is not at all
+  clear how [[3]] those findings will be to human aging. Sometimes biology is
+  universal, especially if it relates to fundamental mechanisms. But in other
+  cases, even discoveries in rats or mice, [[4]] are mammals and biologically
+  much closer to us, are difficult to translate into humans. It may be a very
+  long time before any findings gained from hydra or jellyfish [[5]] useful to
+  us.
+items:
+  - no: 1
+    choice: mean
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: it
+      verb: mean
+    explanation: Nor 도치 구문에서 조동사 does 뒤에는 동사원형이 와야 하므로 mean이 맞다.
+  - no: 2
+    choice: making
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: their property
+      exists: 없다
+      current: making
+      fixed: makes
+    explanation: 주어 their property of ...에 대한 본동사가 없으므로 making이 아니라 단수 동사 makes가 되어야 한다.
+  - no: 3
+    choice: relevant
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: relevant
+      target: those findings
+      role: 형용사
+    explanation: will be의 보어 자리(how relevant those findings will be)이므로 형용사 relevant가 맞다.
+  - no: 4
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: which
+    explanation: 선행사 rats or mice를 받고 뒤의 절에 주어가 빠진 불완전한 절이므로 계속적 용법의 which가 맞다.
+  - no: 5
+    choice: are
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: any findings
+      number: 복수
+      verb: are
+    explanation: 주어 any findings gained from ...가 복수이므로 are가 맞다.

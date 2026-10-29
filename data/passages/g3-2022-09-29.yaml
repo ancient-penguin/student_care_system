@@ -1,0 +1,63 @@
+passage_id: g3-2022-09-29
+kind: grammar
+source: 고3 2022년 9월 모평 / 29번
+text: >
+  Recognizing ethical issues is the most important step in understanding
+  business ethics. An ethical issue is an identifiable problem, situation, or
+  opportunity that requires a person to choose from among several actions that
+  may [[1]] as right or wrong, ethical or unethical. [[2]] how to choose from
+  alternatives and make a decision requires not only good personal values, but
+  also knowledge competence in the business area of concern. Employees also need
+  to know when to rely on their organizations’ policies and codes of ethics or
+  [[3]] discussions with co-workers or managers on appropriate conduct. Ethical
+  decision making is not always easy because there are always gray areas [[4]]
+  create dilemmas, no matter how decisions are made. For instance, should an
+  employee report on a co-worker engaging in time theft? Should a salesperson
+  leave out facts about a product’s poor safety record in his presentation to a
+  customer? Such questions require the decision maker to evaluate the ethics of
+  his or her choice and decide [[5]] to ask for guidance.
+items:
+  - no: 1
+    choice: be evaluated
+    is_correct: true
+    tag: 태(능동·수동)
+    model_slots:
+      subject: that(several actions)
+      relation: 수동
+      word: be evaluated
+    explanation: 선행사 several actions는 옳고 그름으로 '평가되는' 대상이므로 수동태 be evaluated가 맞다.
+  - no: 2
+    choice: Learn
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: Learn ~ a decision
+      exists: 있다
+      current: Learn
+      fixed: Learning
+    explanation: 문장의 본동사 requires가 이미 있으므로 주어 자리의 Learn은 동명사 Learning이 되어야 한다.
+  - no: 3
+    choice: have
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: or
+      pair: rely와 have
+      word: have
+    explanation: know when to 뒤의 rely와 or로 병렬되는 동사원형이므로 have가 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 gray areas를 수식하며 뒤의 절에 주어가 빠져 있으므로 관계대명사 that이 맞다.
+  - no: 5
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: whether
+    explanation: decide의 목적어로 '~할지 말지'를 뜻하는 whether to부정사가 쓰였으므로 whether가 맞다.

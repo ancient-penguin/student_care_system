@@ -1,0 +1,62 @@
+passage_id: g1-2026-03-29
+kind: grammar
+source: 고1 2026년 3월 학평 / 29번
+text: >
+  A conceptual model is an explanation, usually highly simplified, of how
+  something works. It doesn’t have to be complete or even [[1]] as long as it is
+  useful. The files, folders, and icons you see displayed on a computer screen
+  [[2]] people create the conceptual model of documents and folders inside the
+  computer, or of apps or applications on the screen. In fact, there are no
+  folders inside the computer—those are effective conceptualizations [[3]] to
+  make them easier to use. Sometimes these depictions can add to the confusion,
+  however. When reading e-mail or visiting a website, the material appears to be
+  on the device, for that is [[4]] it is displayed and used. But in fact, in
+  many cases the actual material is “in the cloud,” located on some distant
+  machine. The conceptual model is of one, coherent image, whereas it may
+  actually consist of parts, each located on different machines [[5]] could be
+  almost anywhere in the world.
+items:
+  - no: 1
+    choice: accurate
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: accurate
+      target: It
+      role: 형용사
+    explanation: be동사의 보어로 complete와 or로 연결되어 주어 It을 설명하므로 형용사 accurate가 맞다.
+  - no: 2
+    choice: helps
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: The files, folders, and icons
+      number: 복수
+      current: helps
+      fixed: help
+    explanation: 주어는 The files, folders, and icons로 복수이므로 helps가 아니라 help가 되어야 한다.
+  - no: 3
+    choice: designed
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: effective conceptualizations
+      relation: 수동
+      word: designed
+    explanation: 개념화가 '고안된' 것이므로 수동의 과거분사 designed가 맞다.
+  - no: 4
+    choice: where
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: where
+    explanation: 뒤에 완전한 절(it is displayed and used)이 오고 장소를 나타내므로 선행사가 생략된 관계부사 where가 맞다.
+  - no: 5
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 different machines를 받고 뒤의 절에 주어가 없으므로 주격 관계대명사 that이 맞다.

@@ -1,0 +1,64 @@
+passage_id: g3-2025-07-29
+kind: grammar
+source: 고3 2025년 7월 학평 / 29번
+text: >
+  There is a kind of artificial intelligence application that is frequently
+  advertised, which can be described as “vaporware”. Vaporware is applications
+  that have either been announced or made [[1]] for sale but are not yet fully
+  functional as artificial intelligence applications. It is often systems that
+  seem to run on artificial intelligence technologies, but which in fact [[2]]
+  not. Instead, they are frequently built by people manually adding the content
+  [[3]] the artificial intelligence application is supposed to be processing.
+  This is frequently done because initially it is cheaper to pay people to add
+  this content than it is [[4]] full artificial intelligence capabilities and
+  populate the data. Vaporware can be used for many reasons. Sometimes a product
+  may start to be sold before it is fully developed. Taking a vaporware product
+  to market means developers can validate ideas with customers before investing
+  the amounts [[5]] to build a full application, allowing for more flexibility
+  in development and for more time to build data.
+items:
+  - no: 1
+    choice: available
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: available
+      target: applications
+      role: 형용사
+    explanation: made의 보어 자리(수동태 made available)이므로 형용사 available이 맞다.
+  - no: 2
+    choice: do
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: which(선행사 systems)
+      number: 복수
+      verb: do
+    explanation: run on ...을 대신하는 대동사이고 선행사 systems가 복수이므로 do가 맞다.
+  - no: 3
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 the content를 받고 뒤의 절에 processing의 목적어가 빠진 불완전한 절이므로 that이 맞다.
+  - no: 4
+    choice: to develop
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 가주어 it
+      form: to부정사
+      word: to develop
+    explanation: 가주어 it에 대응하는 진주어 자리로 앞의 to pay와 비교되므로 to develop이 맞다.
+  - no: 5
+    choice: require
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: the amounts
+      relation: 수동
+      current: require
+      fixed: required
+    explanation: "the amounts가 완전한 앱을 만드는 데 '필요한' 수동 관계이므로 require가 아니라 과거분사 required가 되어야 한다."

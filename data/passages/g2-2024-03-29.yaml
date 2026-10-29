@@ -1,0 +1,62 @@
+passage_id: g2-2024-03-29
+kind: grammar
+source: 고2 2024년 3월 학평 / 29번
+text: >
+  For years, many psychologists have held strongly to the belief [[1]] the key
+  to addressing negative health habits is to change behavior. This, more than
+  values and attitudes, [[2]] the part of personality that is easiest to change.
+  Ingestive habits such as smoking, drinking and various eating behaviors are
+  the most common health concerns targeted for behavioral changes.
+  Process-addiction behaviors (workaholism, shopaholism, and the like) fall into
+  this category as well. Mental imagery combined with power of suggestion was
+  taken up as the premise of behavioral medicine to help people change negative
+  health behaviors into positive [[3]]. Although this technique alone will not
+  produce changes, when [[4]] alongside other behavior modification tactics and
+  coping strategies, behavioral changes have proved effective for some people.
+  [[5]] mental imagery does is reinforce a new desired behavior. Repeated use of
+  images reinforces the desired behavior more strongly over time.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: 명사 the belief의 내용을 설명하는 동격절이고 뒤에 완전한 절이 오므로 접속사 that이 맞다.
+  - no: 2
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: This
+      number: 단수
+      verb: is
+    explanation: 삽입구 more than values and attitudes를 제외한 주어 This가 단수이므로 is가 맞다.
+  - no: 3
+    choice: ones
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: ones
+      referent: health behaviors
+      number: 복수
+    explanation: ones는 앞의 복수 명사 behaviors를 가리키므로 맞다.
+  - no: 4
+    choice: using
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: this technique
+      relation: 수동
+      current: using
+      fixed: used
+    explanation: 생략된 주어 this technique는 '사용되는' 것이므로 using이 아니라 used가 되어야 한다.
+  - no: 5
+    choice: What
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: What
+    explanation: 선행사가 없고 뒤의 절(mental imagery does)에 목적어가 없으므로 관계대명사 What이 맞다.

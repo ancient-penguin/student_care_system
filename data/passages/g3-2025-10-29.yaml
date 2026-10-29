@@ -1,0 +1,66 @@
+passage_id: g3-2025-10-29
+kind: grammar
+source: 고3 2025년 10월 학평 / 29번
+text: >
+  The physical act of movement in the morning is not just beneficial for the
+  body—it serves as a powerful stimulant for the brain, [[1]] it from the
+  stillness of sleep and preparing it for the demands of the day. This awakening
+  goes beyond physical health; it plays a critical role in enhancing cognitive
+  function, particularly in the realms of creativity and imagination. One of the
+  key mechanisms [[2]] this occurs is increased blood flow to the hippocampus, a
+  part of the brain responsible for memory, learning, and the creation of new
+  ideas. The hippocampus, often described as the brain’s center for imagination
+  and memory consolidation, thrives on the increased oxygenation and nutrients
+  [[3]] by physical movement. Studies published in journals highlight the
+  positive effects of regular morning exercise on cognitive flexibility and
+  creative thinking, confirming that exercise not only promotes physical health
+  but also stimulates neural plasticity—the brain’s ability to reorganize [[4]]
+  by forming new neural connections. This adaptability is essential for creative
+  thought, as it allows individuals [[5]] problems from new angles, make novel
+  associations, and think more differently.
+items:
+  - no: 1
+    choice: awakening
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: The physical act of movement
+      relation: 능동
+      word: awakening
+    explanation: 의미상 주어인 움직임이 뇌를 '깨우는' 능동 관계의 분사구문이므로 awakening이 맞다.
+  - no: 2
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: which
+      fixed: by which
+    explanation: 뒤의 절(this occurs)이 완전하므로 관계대명사 which가 아니라 전치사+관계대명사 by which가 되어야 한다.
+  - no: 3
+    choice: provided
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: nutrients
+      relation: 수동
+      word: provided
+    explanation: oxygenation and nutrients가 신체 움직임에 의해 '제공되는' 수동 관계이므로 provided가 맞다.
+  - no: 4
+    choice: itself
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: itself
+      referent: the brain
+      number: 단수
+    explanation: reorganize의 목적어가 의미상 주어 the brain과 같으므로 재귀대명사 itself가 맞다.
+  - no: 5
+    choice: to approach
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: allows
+      form: to부정사
+      word: to approach
+    explanation: allow + 목적어 + to부정사 구문이므로 to approach가 맞다.

@@ -1,0 +1,65 @@
+passage_id: g2-2025-10-29
+kind: grammar
+source: 고2 2025년 10월 학평 / 29번
+text: >
+  When a cell divides, the genomes of [[1]] two daughters are often not quite
+  identical to each other or to that of the parent cell. On rare occasions, the
+  error may represent a change for the better; more probably, it will cause no
+  significant difference in the cell’s prospects. But in some cases, the error
+  will cause serious damage; for example, by [[2]] the coding sequence for a key
+  protein. Changes due to mistakes of the first type will tend to be
+  perpetuated, because the altered cell has an increased likelihood of
+  reproducing itself. Changes due to mistakes of the second type―neutral
+  changes―may be perpetuated or not: it is a matter of chance [[3]] the altered
+  cell or its cousins will succeed. But changes that cause serious damage [[4]]
+  nowhere: the cell that suffers them dies, leaving no progeny. Through endless
+  repetition of this cycle of mutation and natural selection organisms evolve:
+  their genetic specifications change, sometimes [[5]] organisms new ways to
+  exploit the environment more effectively, to survive in competition with
+  others, and to reproduce successfully.
+items:
+  - no: 1
+    choice: its
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: its
+      referent: a cell
+      number: 단수
+    explanation: 앞의 단수 명사 a cell을 가리키므로 소유격 its가 맞다.
+  - no: 2
+    choice: disrupting
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: by
+      form: 동명사
+      word: disrupting
+    explanation: 전치사 by의 목적어 자리이므로 동명사 disrupting이 맞다.
+  - no: 3
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: whether
+    explanation: "'~인지 아닌지'의 뜻으로 완전한 절을 이끌어 진주어 역할을 하는 명사절이므로 whether가 맞다."
+  - no: 4
+    choice: lead
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: changes
+      number: 복수
+      verb: lead
+    explanation: 주어 changes가 복수이므로 lead가 맞다.
+  - no: 5
+    choice: give
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: their genetic specifications
+      exists: 있다
+      current: give
+      fixed: giving
+    explanation: 이미 본동사 change가 있으므로 give가 아니라 분사구문을 이루는 giving이 되어야 한다.

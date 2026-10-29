@@ -1,0 +1,49 @@
+passage_id: g3-2023-03-29
+kind: grammar
+source: 고3 2023년 3월 학평 / 29번
+text: >
+  From the 8th to the 12th century CE, while Europe suffered the perhaps
+  overdramatically named Dark Ages, science on planet Earth could be found
+  almost [[1]] in the Islamic world. This science was not exactly like our
+  science today, but it was surely antecedent to [[2]] and was nonetheless an
+  activity aimed at knowing about the world. Muslim rulers granted scientific
+  institutions tremendous resources, such as libraries, observatories, and
+  hospitals. Great schools in all the cities [[3]] the Arabic Near East and
+  Northern Africa (and even into Spain) trained generations of scholars.
+  Almost every word in the modern scientific lexicon that begins with the
+  prefix “al” [[4]] its origins to Islamic science—algorithm, alchemy,
+  alcohol, alkali, algebra. And then, just over 400 years after it started, it
+  ground to an apparent halt, and it would be a few hundred years, give or
+  take, before [[5]] we would today unmistakably recognize as science appeared
+  in Europe—with Galileo, Kepler, and, a bit later, Newton.
+items:
+  - no: 1
+    choice: exclusively
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: exclusively, target: in the Islamic world, role: 부사 }
+    explanation: 전치사구 in the Islamic world를 수식하는 부사이므로 exclusively가 맞다.
+  - no: 2
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: it, referent: our science, number: 단수 }
+    explanation: 전치사 to의 목적어로 단수 명사 our science를 가리키므로 it이 맞다.
+  - no: 3
+    choice: covering
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: all the cities, relation: 능동, word: covering }
+    explanation: 도시들이 지역을 아우르는 능동 관계이므로 현재분사 covering이 맞다.
+  - no: 4
+    choice: owes
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: Almost every word, number: 단수, verb: owes }
+    explanation: 주어는 every word로 단수이므로 owes가 맞다.
+  - no: 5
+    choice: that
+    is_correct: false
+    tag: 관계사
+    model_slots: { completeness: 불완전, current: that, fixed: what }
+    explanation: before 뒤에 선행사가 없고 recognize의 목적어가 빠진 불완전한 절이 이어지므로 that이 아니라 what이 되어야 한다.

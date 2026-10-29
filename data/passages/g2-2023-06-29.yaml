@@ -1,0 +1,63 @@
+passage_id: g2-2023-06-29
+kind: grammar
+source: 고2 2023년 6월 학평 / 29번
+text: >
+  Research psychologists often work with self-report data, made up of
+  participants’ verbal accounts of their behavior. This is the case [[1]]
+  questionnaires, interviews, or personality inventories are used to measure
+  variables. Self-report methods can be quite useful. They take advantage of the
+  fact that people have a unique opportunity to observe [[2]] full-time.
+  However, self-reports can be plagued by several kinds of distortion. One of
+  the most problematic of these distortions is the social desirability bias,
+  which is a tendency to give [[3]] approved answers to questions about oneself.
+  Subjects who are influenced by this bias work overtime trying to create a
+  favorable impression, especially when subjects [[4]] about sensitive issues.
+  For example, many survey respondents will report that they voted in an
+  election or [[5]] to a charity when in fact it is possible to determine that
+  they did not.
+items:
+  - no: 1
+    choice: whenever
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 접속사
+      word: whenever
+    explanation: 뒤에 완전한 절(questionnaires ... are used ...)이 이어지는 부사절이므로 접속사 whenever가 맞다.
+  - no: 2
+    choice: themselves
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: themselves
+      referent: people
+      number: 복수
+    explanation: observe의 목적어가 주어 people과 같으므로 재귀대명사 themselves가 맞다.
+  - no: 3
+    choice: socially
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: socially
+      target: approved
+      role: 부사
+    explanation: 분사 형용사 approved를 수식하는 자리이므로 부사 socially가 맞다.
+  - no: 4
+    choice: ask
+    is_correct: false
+    tag: 태(능동·수동)
+    model_slots:
+      subject: subjects
+      relation: 수동
+      current: ask
+      fixed: are asked
+    explanation: subjects는 민감한 문제에 대해 '질문받는' 대상이므로 ask가 아니라 수동태 are asked가 되어야 한다.
+  - no: 5
+    choice: gave
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: or
+      pair: voted와 gave
+      word: gave
+    explanation: that절의 동사 voted와 or로 병렬되므로 과거형 gave가 맞다.

@@ -1,0 +1,47 @@
+passage_id: g3-2023-09-29
+kind: grammar
+source: 고3 2023년 9월 모평 / 29번
+text: >
+  Viewing the stress response as a resource can transform the physiology of
+  fear into the biology of courage. It can turn a threat into a challenge and
+  can help you [[1]] your best under pressure. Even when the stress doesn’t
+  feel helpful ― as in the case of anxiety ― welcoming it can transform [[2]]
+  into something that is helpful: more energy, more confidence, and a greater
+  willingness to take action. You can apply this strategy in your own life
+  anytime you notice signs of stress. When you feel your heart beating or your
+  breath quickening, [[3]] that it is your body’s way of trying to give you
+  more energy. If you notice tension in your body, remind yourself [[4]] the
+  stress response gives you access to your strength. Sweaty palms? Remember
+  what it felt like [[5]] on your first date ― palms sweat when you’re close
+  to something you want.
+items:
+  - no: 1
+    choice: do
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: help, form: 원형부정사, word: do }
+    explanation: help는 목적격보어로 원형부정사를 쓸 수 있으므로 do가 맞다.
+  - no: 2
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: it, referent: the stress, number: 단수 }
+    explanation: transform의 목적어로 단수 명사 the stress를 가리키므로 it이 맞다.
+  - no: 3
+    choice: realizing
+    is_correct: false
+    tag: 본동사 유무
+    model_slots: { subject: 생략된 you(명령문), exists: 없다, current: realizing, fixed: realize }
+    explanation: When절 뒤 주절에 본동사가 없으므로 명령문의 동사원형 realize가 되어야 한다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: remind yourself의 직접목적어로 완전한 절을 이끄는 명사절 접속사이므로 that이 맞다.
+  - no: 5
+    choice: to go
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: 가주어 it, form: to부정사, word: to go }
+    explanation: 가주어 it의 진주어 자리이므로 to부정사 to go가 맞다.

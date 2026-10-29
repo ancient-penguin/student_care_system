@@ -1,0 +1,63 @@
+passage_id: g3-2022-03-29
+kind: grammar
+source: 고3 2022년 3월 학평 / 29번
+text: >
+  We don’t know what ancient Greek music sounded like, because there are no
+  examples of it in written or notated form, nor [[1]] survived in oral
+  tradition. Much of it was probably improvised anyway, within certain rules and
+  conventions. So we are forced largely to guess at its basis from the accounts
+  of writers such as Plato and Aristotle, who were generally more concerned with
+  writing about music as a philosophical and ethical exercise [[2]] with
+  providing a technical primer on its practice. It seems Greek music was
+  predominantly a vocal form, [[3]] of sung verse accompanied by instruments
+  such as the lyre or the plucked kithara (the root of ‘guitar’). In fact, Plato
+  considered music in which the lyre and flute played alone and not as the
+  accompaniment of dance or song [[4]] ‘exceedingly coarse and tasteless’. The
+  melodies seem to have had a very limited pitch range, since the instruments
+  [[5]] span only an octave, from one E (as we’d now define it) to the next.
+items:
+  - no: 1
+    choice: has it
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: it
+      number: 단수
+      verb: has it
+    explanation: 부정어 nor 뒤에서 도치가 일어나며 주어 it이 단수이므로 has it이 맞다.
+  - no: 2
+    choice: as
+    is_correct: false
+    tag: 접속사·명사절
+    model_slots:
+      role: 접속사
+      current: as
+      fixed: than
+    explanation: 앞에 비교급 more concerned가 있으므로 as가 아니라 비교 대상을 잇는 than이 되어야 한다.
+  - no: 3
+    choice: consisting
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: a vocal form
+      relation: 능동
+      word: consisting
+    explanation: consist는 자동사이고 a vocal form이 '구성되어 있는' 능동 형태로 쓰이므로 consisting이 맞다.
+  - no: 4
+    choice: to be
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: considered
+      form: to부정사
+      word: to be
+    explanation: consider + 목적어 + to be + 보어 구문이므로 to be가 맞다.
+  - no: 5
+    choice: generally
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: generally
+      target: span
+      role: 부사
+    explanation: 동사 span을 수식하는 자리이므로 부사 generally가 맞다.

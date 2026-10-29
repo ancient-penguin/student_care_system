@@ -1,0 +1,65 @@
+passage_id: g2-2026-06-29
+kind: grammar
+source: 고2 2026년 6월 학평 / 29번
+text: >
+  The renowned British philosopher Alfred North Whitehead asserted that
+  “civilization advances by extending the number of operations we can perform
+  without thinking about them.” Take, for example, the “advance” [[1]] to
+  civilization by the discount coupon, which allows consumers to assume that
+  they will receive a reduced purchase price by presenting the coupon. The
+  extent to which we have learned to operate mechanically on that assumption is
+  illustrated in the experience of one automobile-tire company. Mailed-out
+  coupons that―because of a printing error―offered no savings to recipients
+  [[2]] just as much customer response as did error-free coupons that offered
+  substantial savings. The obvious but instructive point here is [[3]] we expect
+  discount coupons to do double duty. Not only [[4]] we expect them to save us
+  money, we also expect them to save us the time and mental energy required to
+  think about how to do it. In today’s world, we need the first advantage to
+  handle pocketbook strain; but we need the second advantage to handle something
+  [[5]] more important―brain strain.
+items:
+  - no: 1
+    choice: offered
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: advance
+      relation: 수동
+      word: offered
+    explanation: the "advance"는 할인 쿠폰에 의해 '제공된' 것이므로 과거분사 offered가 맞다.
+  - no: 2
+    choice: producing
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: Mailed-out coupons
+      exists: 없다
+      current: producing
+      fixed: produced
+    explanation: 주어 Mailed-out coupons의 본동사가 없으므로 producing이 아니라 produced가 되어야 한다.
+  - no: 3
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: is의 보어 자리에 완전한 절(we expect ...)이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 4
+    choice: do
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: we
+      number: 복수
+      verb: do
+    explanation: 부정어 Not only가 문두에 와서 도치된 문장이고 주어 we에 맞춰 조동사 do가 맞다.
+  - no: 5
+    choice: potentially
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: potentially
+      target: more important
+      role: 부사
+    explanation: 형용사 more important를 수식하는 자리이므로 부사 potentially가 맞다.

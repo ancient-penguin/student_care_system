@@ -1,0 +1,63 @@
+passage_id: g3-2024-04-29
+kind: grammar
+source: 고3 2024년 4월 학평 / 29번
+text: >
+  When a new pathogen emerges, one way it transitions from wherever it has been
+  living into a new host may be the acquisition of new traits. Imagine that in
+  [[1]] hourly struggle to survive over long periods of time and many
+  generations, a fungus species might acquire a protective capsule―a bit of
+  coating―that shields it or even masks it from other microbes or cells. Then it
+  acquires some enzymes that enable it to survive [[2]] chemicals other microbes
+  might throw at it. If it can overcome these chemicals, it may also overcome
+  the same or similar chemicals [[3]] as antifungal drugs. Maybe it also evolves
+  to tolerate warmer temperatures. Now we’ve got a yeast that once made its home
+  in an apple tree or in a wetland but [[4]] at this point can live quite
+  happily in our body, hide from our immune system, and disarm our drugs. Then
+  some of us carry it from one country to another and then another, and
+  eventually it finds a host in a hospital patient who has recently received an
+  organ transplant or [[5]] elderly with a weakened immune system.
+items:
+  - no: 1
+    choice: its
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: its
+      referent: a fungus species
+      number: 단수
+    explanation: its는 단수인 a fungus species를 가리키므로 맞다.
+  - no: 2
+    choice: whatever
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: whatever
+    explanation: 뒤의 절(other microbes might throw at it)에 목적어가 없고 chemicals를 수식하므로 복합관계사 whatever가 맞다.
+  - no: 3
+    choice: used
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: chemicals
+      relation: 수동
+      word: used
+    explanation: 화학물질이 항진균제로 '사용되는' 것이므로 수동의 과거분사 used가 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 a yeast를 받고 뒤의 절에 주어가 없으므로 주격 관계대명사 that이 맞다.
+  - no: 5
+    choice: are
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: who(a hospital patient)
+      number: 단수
+      current: are
+      fixed: is
+    explanation: or 뒤 동사의 주어는 선행사가 a hospital patient인 who로 단수이므로 are가 아니라 is가 되어야 한다.

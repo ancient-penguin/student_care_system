@@ -1,0 +1,62 @@
+passage_id: g3-2024-06-29
+kind: grammar
+source: 고3 2024년 6월 모평 / 29번
+text: >
+  What makes practicing retrieval so much better than review? One answer comes
+  from the psychologist R. A. Bjork’s concept of desirable difficulty. More
+  difficult retrieval [[1]] to better learning, provided the act of retrieval is
+  itself successful. Free recall tests, in which students need to recall as much
+  as they can remember without prompting, tend to result in better retention
+  than cued recall tests, in which students [[2]] hints about what they need to
+  remember. Cued recall tests, in turn, are better than recognition tests, such
+  as multiple-choice answers, [[3]] the correct answer needs to be recognized
+  but not generated. Giving someone a test immediately after they learn
+  something improves retention less than giving them a slight delay, long enough
+  so that answers aren’t in mind when they need [[4]]. Difficulty, far from
+  being a barrier to [[5]] retrieval work, may be part of the reason it does so.
+items:
+  - no: 1
+    choice: leads
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: More difficult retrieval
+      number: 단수
+      verb: leads
+    explanation: 주어는 불가산 명사 More difficult retrieval이므로 단수 동사 leads가 맞다.
+  - no: 2
+    choice: give
+    is_correct: false
+    tag: 태(능동·수동)
+    model_slots:
+      subject: students
+      relation: 수동
+      current: give
+      fixed: are given
+    explanation: students는 힌트를 '받는' 대상이므로 give가 아니라 수동태 are given이 되어야 한다.
+  - no: 3
+    choice: where
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: where
+    explanation: 선행사 recognition tests 뒤에 완전한 절이 이어지므로 관계부사 where가 맞다.
+  - no: 4
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: answers
+      number: 복수
+    explanation: need의 목적어로 복수 명사 answers를 가리키므로 them이 맞다.
+  - no: 5
+    choice: making
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 전치사 to
+      form: 동명사
+      word: making
+    explanation: a barrier to의 to는 전치사이므로 동명사 making이 맞다.

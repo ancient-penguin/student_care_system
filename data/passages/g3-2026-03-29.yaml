@@ -1,0 +1,52 @@
+passage_id: g3-2026-03-29
+kind: grammar
+source: 고3 2026년 3월 학평 / 29번
+text: >
+  Darwin understood that since inheritance is conservative, it is in the
+  nature of the organism to impose itself on the surroundings, [[1]] many
+  highly similar but variable offspring regardless of the nature of the
+  conditions. He further recognized that these fundamental aspects of the
+  nature of the organism [[2]] reproductive overrun, with organisms routinely
+  producing more offspring than there are resources to support them. The need
+  to survive implies that the capacity for using necessary resources must
+  complement the opportunity to use [[3]]. But needs and opportunity do not
+  perfectly match. Inheritance produces the capacities for exploiting the
+  surroundings, but in a way that is indifferent to the surroundings.
+  Offspring cannot anticipate the nature of the conditions [[4]] they find
+  themselves, much less alter themselves in ways that are suitable to any
+  changes in those conditions. While it is true that organisms can express
+  some amount of flexibility in their form and function in response to their
+  immediate surroundings, these adjustments are [[5]] compared to the
+  constraints of inheritance. As a result, not every living thing can live
+  everywhere.
+items:
+  - no: 1
+    choice: producing
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: the organism, relation: 능동, word: producing }
+    explanation: 생물이 자손을 만들어 내는 능동 관계의 분사구문이므로 producing이 맞다.
+  - no: 2
+    choice: imply
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: these fundamental aspects, number: 복수, verb: imply }
+    explanation: that절의 주어는 these fundamental aspects로 복수이므로 imply가 맞다.
+  - no: 3
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: them, referent: necessary resources, number: 복수 }
+    explanation: use의 목적어로 복수 명사 necessary resources를 가리키므로 them이 맞다.
+  - no: 4
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots: { completeness: 완전, current: which, fixed: in which }
+    explanation: 뒤의 절(they find themselves)이 완전하므로 which가 아니라 in which가 되어야 한다.
+  - no: 5
+    choice: minor
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: minor, target: these adjustments, role: 형용사 }
+    explanation: be동사 are의 보어 자리로 주어를 설명하므로 형용사 minor가 맞다.

@@ -1,0 +1,48 @@
+passage_id: g2-2024-09-29
+kind: grammar
+source: 고2 2024년 9월 학평 / 29번
+text: >
+  One well-known shift took place when the accepted view ―that the Earth was
+  the center of the universe—changed to one where we understood that we are
+  only inhabitants on one planet [[1]] the Sun. With each person who grasped
+  the solar system view, [[2]] became easier for the next person to do so. So
+  it is with the notion that the world revolves around the human economy. This
+  is slowly being replaced by the view that the economy is a part of the
+  larger system of material flows that connect all living things. When this
+  perspective shifts into place, it will be obvious that our economic
+  well-being requires that we account for, and [[3]] to, factors of ecological
+  health. Unfortunately we do not have a century or two [[4]] the change. By
+  clarifying the nature of the old and new perspectives, and by identifying
+  actions [[5]] we might cooperate to move the process along, we can help
+  accelerate the shift.
+items:
+  - no: 1
+    choice: orbiting
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: one planet, relation: 능동, word: orbiting }
+    explanation: 행성이 태양을 도는 능동 관계이므로 현재분사 orbiting이 맞다.
+  - no: 2
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: it, referent: to do so(진주어), number: 단수 }
+    explanation: 뒤의 진주어 to do so를 대신하는 가주어이므로 it이 맞다.
+  - no: 3
+    choice: respond
+    is_correct: true
+    tag: 병렬
+    model_slots: { conj: and, pair: account for와 respond to, word: respond }
+    explanation: that절의 주어 we의 동사로 account for와 병렬되므로 동사원형 respond가 맞다.
+  - no: 4
+    choice: make
+    is_correct: false
+    tag: 준동사
+    model_slots: { trigger: a century or two, form: to부정사, current: make, fixed: to make }
+    explanation: 명사 a century or two를 수식하는 자리이므로 make가 아니라 to부정사 to make가 되어야 한다.
+  - no: 5
+    choice: on which
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 완전, word: on which }
+    explanation: 뒤의 절(we might cooperate)이 완전하고 cooperate on actions의 관계이므로 on which가 맞다.

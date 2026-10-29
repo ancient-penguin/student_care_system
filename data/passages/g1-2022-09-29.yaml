@@ -1,0 +1,47 @@
+passage_id: g1-2022-09-29
+kind: grammar
+source: 고1 2022년 9월 학평 / 29번
+text: >
+  The human brain, it turns out, has shrunk in mass by about 10 percent since
+  it [[1]] in size 15,000-30,000 years ago. One possible reason is that many
+  thousands of years ago humans lived in a world of dangerous predators [[2]]
+  they had to have their wits about them at all times to avoid being killed.
+  Today, we have effectively domesticated ourselves and many of the tasks of
+  survival― from avoiding immediate death to building shelters to obtaining
+  food― [[3]] been outsourced to the wider society. We are smaller than our
+  ancestors too, and it is a characteristic of domestic animals [[4]] they are
+  generally smaller than their wild cousins. None of this may mean we are
+  dumber― brain size is not necessarily an indicator of human intelligence―
+  but it may mean that our brains today are wired up differently, and perhaps
+  more efficiently, than [[5]] of our ancestors.
+items:
+  - no: 1
+    choice: peaked
+    is_correct: true
+    tag: 본동사 유무
+    model_slots: { subject: it, verb: peaked }
+    explanation: since가 이끄는 부사절의 주어 it(뇌)에 대한 본동사로, 15,000~30,000년 전의 과거 일이므로 과거시제 peaked가 맞다.
+  - no: 2
+    choice: where
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 완전, word: where }
+    explanation: 선행사 a world of dangerous predators 뒤에 완전한 절(they had to have ...)이 이어지므로 관계부사 where가 맞다.
+  - no: 3
+    choice: has
+    is_correct: false
+    tag: 수일치
+    model_slots: { subject: many of the tasks of survival, number: 복수, current: has, fixed: have }
+    explanation: 주어는 many of the tasks of survival로 복수이므로 has가 아니라 have가 되어야 한다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: 가주어 it의 진주어로 완전한 절(they are generally smaller ...)을 이끄는 명사절 접속사이므로 that이 맞다.
+  - no: 5
+    choice: those
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: those, referent: brains, number: 복수 }
+    explanation: 비교 대상인 복수 명사 brains를 대신하므로 those가 맞다.

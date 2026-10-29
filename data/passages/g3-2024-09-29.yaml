@@ -1,0 +1,64 @@
+passage_id: g3-2024-09-29
+kind: grammar
+source: 고3 2024년 9월 모평 / 29번
+text: >
+  Victorian England is characterised by the full development of the Industrial
+  Revolution. England became the first industrial nation in the world and, by
+  1850, the first nation to have more people [[1]] in industry than in
+  agriculture. Expanding trade coincided with the growth of the Empire and
+  brought great wealth to Britain, but this wealth was not [[2]] distributed.
+  Many enterprising individuals (the ‘self-made men’) rose from humble origins
+  to positions of wealth and influence, but large sections of the working class
+  [[3]] forced into the overcrowded slums of large cities where they worked long
+  hours for low wages in unhealthy conditions. The manufacturing towns of the
+  north of England provided some of the worst examples and [[4]] such socially
+  conscious novels as Kingsley’s Alton Locke, Gaskell’s Mary Barton, and
+  Dickens’s Hard Times. In the south there was London, already the largest city
+  in the world, showing all the crime, evil, and misery [[5]] result from
+  overpopulation and unplanned growth.
+items:
+  - no: 1
+    choice: employed
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: more people
+      relation: 수동
+      word: employed
+    explanation: "people이 산업에 '고용된' 수동 관계이므로 과거분사 employed가 맞다."
+  - no: 2
+    choice: evenly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: evenly
+      target: distributed
+      role: 부사
+    explanation: 과거분사 distributed를 수식하는 자리이므로 부사 evenly가 맞다.
+  - no: 3
+    choice: were
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: large sections
+      number: 복수
+      verb: were
+    explanation: 주어 large sections of the working class가 복수이므로 were가 맞다.
+  - no: 4
+    choice: inspired
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: provided와 inspired
+      word: inspired
+    explanation: 주어 The manufacturing towns에 이어지는 동사 provided와 and로 병렬되므로 inspired가 맞다.
+  - no: 5
+    choice: whose
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      current: whose
+      fixed: that
+    explanation: "선행사 all the crime, evil, and misery를 받고 뒤의 절에 주어가 빠진 불완전한 절이므로 whose가 아니라 주격 관계대명사 that(또는 which)이 되어야 한다."

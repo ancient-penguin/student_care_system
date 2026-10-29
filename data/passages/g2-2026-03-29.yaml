@@ -1,0 +1,63 @@
+passage_id: g2-2026-03-29
+kind: grammar
+source: 고2 2026년 3월 학평 / 29번
+text: >
+  The Industrial Revolution did more than just invent new materials or machines.
+  It invented a new process for manufacturing: the modern factory. Prior to
+  around 1850, most piano shops used an apprentice system [[1]] a master builder
+  taught younger workers the skills of the trade, usually over the course of
+  many years. The larger piano shops [[2]] have specialists—for example, one
+  person who specialized in soundboards, another who made hammers, and so on.
+  But even the largest piano makers of that time produced no more than 5-10
+  pianos per year per worker, as pianos were still [[3]] essentially one at a
+  time. The development of a true piano factory [[4]] first in the United
+  States, led by Jonas Chickering in Boston and later the Steinway family in New
+  York City. These factories led to improvements in both efficiency and quality.
+  For example, one of the factories of the time had [[5]] own iron casting
+  facility where it made its metal plates, which were thought to be the best
+  available.
+items:
+  - no: 1
+    choice: in which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: in which
+    explanation: 선행사 an apprentice system을 받고 뒤에 완전한 절이 오므로 전치사+관계대명사 in which가 맞다.
+  - no: 2
+    choice: did
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: The larger piano shops
+      verb: did (have)
+    explanation: 동사 have를 강조하는 조동사 did로, 주어 The larger piano shops의 본동사 have와 함께 쓰였으므로 맞다.
+  - no: 3
+    choice: made
+    is_correct: true
+    tag: 태(능동·수동)
+    model_slots:
+      subject: pianos
+      relation: 수동
+      word: made
+    explanation: 피아노는 '만들어지는' 것이므로 were와 함께 수동태를 이루는 made가 맞다.
+  - no: 4
+    choice: occurring
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: The development of a true piano factory
+      exists: 없다
+      current: occurring
+      fixed: occurred
+    explanation: 주어 The development ...의 본동사가 없으므로 occurring이 아니라 occurred가 되어야 한다.
+  - no: 5
+    choice: its
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: its
+      referent: one of the factories
+      number: 단수
+    explanation: its는 단수인 one of the factories를 가리키므로 맞다.

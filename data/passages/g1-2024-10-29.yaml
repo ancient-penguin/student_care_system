@@ -1,0 +1,64 @@
+passage_id: g1-2024-10-29
+kind: grammar
+source: 고1 2024년 10월 학평 / 29번
+text: >
+  Digital technologies are essentially related to metaphors, but digital
+  metaphors are different from linguistic [[1]] in important ways. Linguistic
+  metaphors are passive, in the sense that the audience needs to choose to
+  actively enter the world proposed by metaphor. In the Shakespearean metaphor
+  “time is a beggar,” the audience is unlikely to understand the metaphor
+  without cognitive effort and without further [[2]] Shakespeare’s prose.
+  Technological metaphors, on the other hand, are active (and often imposing) in
+  the sense that they are realized in digital artifacts that are actively doing
+  things, forcefully [[3]] a user’s meaning horizon. Technological creators
+  cannot generally afford to require their potential audience to wonder how the
+  metaphor works; normally the selling point is [[4]] the usefulness of the
+  technology is obvious at first glance. Shakespeare, on the other hand, is
+  beloved in part because the meaning of his works is not immediately obvious
+  and [[5]] some thought on the part of the audience.
+items:
+  - no: 1
+    choice: ones
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: ones
+      referent: metaphors
+      number: 복수
+    explanation: 앞의 복수 명사 metaphors를 대신하므로 ones가 맞다.
+  - no: 2
+    choice: engaging
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: without
+      form: 동명사
+      word: engaging
+    explanation: 전치사 without의 목적어 자리이므로 동명사 engaging이 맞다.
+  - no: 3
+    choice: changing
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: digital artifacts
+      relation: 능동
+      word: changing
+    explanation: "분사구문의 의미상 주어 digital artifacts가 사용자의 의미 지평을 '바꾸는' 능동 관계이므로 changing이 맞다."
+  - no: 4
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: what
+      fixed: that
+    explanation: is의 보어 자리에 완전한 절이 이어지므로 what이 아니라 명사절 접속사 that이 되어야 한다.
+  - no: 5
+    choice: requires
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: is와 requires
+      word: requires
+    explanation: 주어 the meaning of his works에 이어지는 동사 is와 and로 병렬되므로 requires가 맞다.

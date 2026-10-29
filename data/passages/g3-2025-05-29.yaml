@@ -1,0 +1,65 @@
+passage_id: g3-2025-05-29
+kind: grammar
+source: 고3 2025년 5월 학평 / 29번
+text: >
+  Working with neuroscientists who use neuroimaging to understand how the human
+  brain works, anthropologist Simon Cohn has shown the extent [[1]] scientists
+  need to develop personal, even intimate, relationships with their subjects in
+  order to secure their cooperation. Only by enlisting subjects in a social
+  relationship, even if briefly, [[2]] the researchers feel they can depend on
+  the subjects to follow directions to the best of their ability. [[3]] down
+  uncomfortably in a dark, noisy scanner, subjects must nonetheless pay
+  attention and follow directions in order to produce data the researchers can
+  use. Before the subjects ever enter the scanner, researchers provide [[4]]
+  with reassurance and sympathy and share personal experiences, creating a
+  subjective alliance between researcher and subject. Although these tactics
+  might influence the specific subjective experiences revealed in the scanner,
+  they are carefully eliminated from the experimental reports so that only the
+  signals from subjects’ brains in response to stimuli in the scanner [[5]] to
+  light.
+items:
+  - no: 1
+    choice: to which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: to which
+    explanation: 선행사 the extent 뒤에 완전한 절이 이어지고 to the extent의 의미이므로 전치사+관계대명사 to which가 맞다.
+  - no: 2
+    choice: do
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: the researchers
+      number: 복수
+      verb: do
+    explanation: Only + 부사구가 문두에 와서 도치되었고 주어 the researchers가 복수이므로 do가 맞다.
+  - no: 3
+    choice: Strapped
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: subjects
+      relation: 수동
+      word: Strapped
+    explanation: 의미상 주어 subjects가 스캐너에 '묶이는' 수동 관계의 분사구문이므로 Strapped가 맞다.
+  - no: 4
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: the subjects
+      number: 복수
+    explanation: provide의 목적어로 복수 명사 the subjects를 가리키므로 them이 맞다.
+  - no: 5
+    choice: coming
+    is_correct: false
+    tag: 본동사 유무
+    model_slots:
+      subject: the signals
+      exists: 없다
+      current: coming
+      fixed: come
+    explanation: so that절의 주어 the signals에 대한 본동사가 없으므로 coming이 아니라 come이 되어야 한다.

@@ -1,0 +1,64 @@
+passage_id: g3-2026-06-29
+kind: grammar
+source: 고3 2026년 6월 모평 / 29번
+text: >
+  Fashion is always deeply cultural, and an excellent example of this can be
+  seen in the evolution of European clothing. At the beginning of the Middle
+  Ages, clothing tended to be simple and was [[1]] made of rough wool or animal
+  furs. With advances in cloth making, however, fashion began moving toward
+  styles [[2]] were more elaborate and form-fitting. In the Renaissance and
+  Elizabethan eras, styles became even more refined. The clothes that wealthy
+  people were wearing became increasingly fancier, with a particular emphasis
+  being placed on smaller waists. The connection between clothing and social
+  status was so pronounced that laws were enacted [[3]] the wearing of certain
+  luxury items. [[4]] only for higher social classes, luxurious styles and
+  decorations such as feathers, silk, or velvet were used as a means of
+  demonstrating one’s standing in society. This was further reinforced as
+  upperclass styles came to be explicitly incorporated into cultural ceremonies
+  so that [[5]] wearers’ roles could be identified clearly.
+items:
+  - no: 1
+    choice: frequently
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: frequently
+      target: made
+      role: 부사
+    explanation: frequently는 과거분사 made를 수식하는 부사이므로 맞다.
+  - no: 2
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      current: what
+      fixed: that
+    explanation: 선행사 styles가 있고 뒤의 절에 주어가 없으므로 what이 아니라 주격 관계대명사 that(which)이 되어야 한다.
+  - no: 3
+    choice: to limit
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 목적(~하기 위해)
+      form: to부정사
+      word: to limit
+    explanation: "'특정 사치품의 착용을 제한하기 위해'라는 목적을 나타내므로 to부정사 to limit가 맞다."
+  - no: 4
+    choice: Allowed
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: luxurious styles and decorations
+      relation: 수동
+      word: Allowed
+    explanation: 주어 luxurious styles and decorations가 '허용된' 수동 관계의 분사구문이므로 Allowed가 맞다.
+  - no: 5
+    choice: their
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: their
+      referent: upperclass styles
+      number: 복수
+    explanation: their는 복수인 upperclass styles를 가리키므로 맞다.

@@ -1,0 +1,63 @@
+passage_id: g2-2022-06-29
+kind: grammar
+source: 고2 2022년 6월 학평 / 29번
+text: >
+  Even though institutions like the World Bank use wealth [[1]] between
+  “developed” and “developing” countries, they also agree that development is
+  more than economic growth. “Development” can also include the social and
+  environmental changes that are caused by or accompany economic growth, some of
+  [[2]] are positive and thus may be negative. Awareness has grown—and continues
+  to grow—that the question of how economic growth is affecting people and the
+  planet [[3]] to be addressed. Countries are slowly learning that it is cheaper
+  and causes [[4]] less suffering to try to reduce the harmful effects of an
+  economic activity or project at the beginning, when it is planned, than after
+  the damage appears. To do this is not easy and is always imperfect. But an
+  awareness of the need for such an effort indicates a greater understanding and
+  moral concern than [[5]] the previous widespread attitude that focused only on
+  creating new products and services.
+items:
+  - no: 1
+    choice: to differentiate
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: use wealth
+      form: to부정사
+      word: to differentiate
+    explanation: "'구별하기 위해' 부를 사용한다는 목적의 의미이므로 to부정사 to differentiate가 맞다."
+  - no: 2
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: which
+    explanation: 전치사 of의 목적어로 앞의 changes를 받으며 뒤의 절에 주어가 빠져 있으므로 관계대명사 which가 맞다.
+  - no: 3
+    choice: needs
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: the question
+      number: 단수
+      verb: needs
+    explanation: that절의 주어는 people이나 planet이 아니라 the question이므로 단수 동사 needs가 맞다.
+  - no: 4
+    choice: much
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: much
+      target: less
+      role: 부사
+    explanation: 비교급 less를 강조하는 부사 자리이므로 much가 맞다.
+  - no: 5
+    choice: was
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: the previous widespread attitude
+      number: 단수
+      current: was
+      fixed: did
+    explanation: 앞의 일반동사 indicates를 대신하는 대동사 자리이므로 was가 아니라 did가 되어야 한다.

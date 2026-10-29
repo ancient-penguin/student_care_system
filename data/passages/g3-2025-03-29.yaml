@@ -1,0 +1,65 @@
+passage_id: g3-2025-03-29
+kind: grammar
+source: 고3 2025년 3월 학평 / 29번
+text: >
+  We lack a sufficient vocabulary for [[1]] sense of the sources of error. The
+  more scientific knowledge we accumulate, the better we understand that the
+  ignorance [[2]] the knowledge enterprise is built is shockingly deep. For
+  instance, it turned out that psychoanalysis’s attempt to delimit the sources
+  of error by categorizing the kinds of mistakes to which humans are subject in
+  light of the therapeutic situation in the talking cure [[3]] on misguided
+  assumptions about the normalcy conditions for subjects. Digging deeper into
+  the structure of the human mind as well as into the specific embodiment of
+  human knowers equipped with a complex nervous system [[4]] that our mental
+  life is filled with illusions on all levels of knowledge acquisition, from
+  sensation to perception, from scientific discourse to the use of technology
+  based on the latest scientific discovery. Yet, once again, we cannot make
+  sense of this picture of ourselves as immersed in the area of ignorance and
+  illusion without at the same time relying on a huge background of shared,
+  objective knowledge that makes our ignorance [[5]] to us. Subjectivity and
+  objectivity are interwoven with our fallibility.
+items:
+  - no: 1
+    choice: making
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: for
+      form: 동명사
+      word: making
+    explanation: 전치사 for의 목적어 자리이므로 동명사 making이 맞다.
+  - no: 2
+    choice: over which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: over which
+    explanation: 선행사 the ignorance를 받고 뒤에 완전한 절(the knowledge enterprise is built)이 오므로 over which가 맞다.
+  - no: 3
+    choice: draw
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: psychoanalysis’s attempt
+      number: 단수
+      current: draw
+      fixed: drew
+    explanation: that절의 주어는 단수인 psychoanalysis’s attempt이고 과거 시제이므로 draw가 아니라 drew가 되어야 한다.
+  - no: 4
+    choice: showed
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: Digging deeper into ...
+      verb: showed
+    explanation: 동명사구 주어 Digging deeper into ...의 본동사가 필요한 자리이므로 showed가 맞다.
+  - no: 5
+    choice: available
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: available
+      target: our ignorance
+      role: 형용사
+    explanation: make의 목적격보어 자리이므로 형용사 available이 맞다.

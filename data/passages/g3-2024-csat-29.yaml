@@ -1,0 +1,63 @@
+passage_id: g3-2024-csat-29
+kind: grammar
+source: 2024학년도 수능 / 29번
+text: >
+  A number of studies provide substantial evidence of an innate human
+  disposition to respond differentially to social stimuli. From birth, infants
+  will orient preferentially towards the human face and voice, [[1]] to know
+  that such stimuli are particularly meaningful for them. Moreover, they
+  register this connection actively, imitating a variety of facial gestures that
+  are presented to them ― tongue protrusions, lip tightenings, mouth openings.
+  They will even try to match gestures [[2]] they have some difficulty,
+  experimenting with their own faces until they succeed. When they [[3]]
+  succeed, they show pleasure by a brightening of their eyes; when they fail,
+  they show distress. In other words, they not only have an innate capacity for
+  matching their own kinaesthetically experienced bodily movements with [[4]] of
+  others that are visually perceived; they have an innate drive to do so. That
+  is, they seem to have an innate drive to imitate others whom they judge [[5]]
+  ‘like me’.
+items:
+  - no: 1
+    choice: seeming
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: infants
+      relation: 능동
+      word: seeming
+    explanation: 주어 infants가 '~처럼 보이는' 능동 관계의 분사구문이므로 seeming이 맞다.
+  - no: 2
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: which
+      fixed: with which
+    explanation: 뒤의 절(they have some difficulty)이 완전하므로 which가 아니라 with which(또는 where)가 되어야 한다.
+  - no: 3
+    choice: do
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: they
+      verb: do (succeed)
+    explanation: 동사 succeed를 강조하는 조동사 do로, 주어 they의 본동사 succeed와 함께 쓰였으므로 맞다.
+  - no: 4
+    choice: those
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: those
+      referent: bodily movements
+      number: 복수
+    explanation: those는 앞의 복수 명사 bodily movements를 가리키므로 맞다.
+  - no: 5
+    choice: to be
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: judge
+      form: to부정사
+      word: to be
+    explanation: judge는 목적격보어로 to부정사를 취하므로(judge them to be) to be가 맞다.

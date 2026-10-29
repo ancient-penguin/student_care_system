@@ -1,0 +1,63 @@
+passage_id: g3-2025-09-29
+kind: grammar
+source: 고3 2025년 9월 모평 / 29번
+text: >
+  Honey can be eaten by itself or mixed with other ingredients. Natural or pure
+  honey has had no additives, preservatives or synthetic ingredients added. Also
+  [[1]] to as ‘undiluted’, it is usually more expensive than diluted honeys.
+  Natural honey can also be called ‘blended honey’, [[2]] honeys from various
+  sources are blended together ― not by the bees, but by human processors and
+  distributors in stages after the honey has been collected. Blending is
+  frequently done for taste as well as marketing reasons, especially since some
+  consumers find the darker honeys too [[3]]. Mixing different types of honey
+  together can make it more palatable, and also gives a more uniform flavour ―
+  this is an important consideration for producers and retailers, who [[4]] the
+  need to guarantee reliable, unsurprising (typically mild) flavours to their
+  customers. Clover is one of the most popular honeys in the U.S., and [[5]]
+  mild flavour and taste have become familiar to many Americans.
+items:
+  - no: 1
+    choice: referred
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: Natural or pure honey
+      relation: 수동
+      word: referred
+    explanation: 생략된 주어 it(honey)이 '~라고 불리는' 수동 관계의 분사구문이므로 referred가 맞다.
+  - no: 2
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      current: which
+      fixed: because
+    explanation: 뒤의 절(honeys ... are blended together)이 완전하므로 관계대명사 which가 아니라 이유의 접속사 because(as)가 되어야 한다.
+  - no: 3
+    choice: strong
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: strong
+      target: the darker honeys
+      role: 형용사
+    explanation: find의 목적격보어 자리이므로 형용사 strong이 맞다.
+  - no: 4
+    choice: feel
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: who(producers and retailers)
+      number: 복수
+      verb: feel
+    explanation: who의 선행사 producers and retailers가 복수이므로 feel이 맞다.
+  - no: 5
+    choice: its
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: its
+      referent: Clover
+      number: 단수
+    explanation: its는 단수인 Clover를 가리키므로 맞다.

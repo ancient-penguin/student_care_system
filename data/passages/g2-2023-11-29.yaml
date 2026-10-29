@@ -1,0 +1,64 @@
+passage_id: g2-2023-11-29
+kind: grammar
+source: 고2 2023년 11월 학평 / 29번
+text: >
+  Lectins are large proteins that serve as a crucial weapon that plants use to
+  defend [[1]]. The lectins in most plants bind to carbohydrates as we consume
+  the plant. They also bind to sugar molecules [[2]] in the gut, in the brain,
+  between nerve endings, in joints and in all bodily fluids. According to Dr.
+  Steven Gundry, these sticky proteins can interrupt messaging between cells and
+  [[3]] toxic and inflammatory reactions. Brain fog is just one result of
+  lectins interrupting communication between nerves. An upset stomach is another
+  common symptom of lectin overload. Dr. Gundry lists a wide range of other
+  health problems including aching joints, dementia, headaches and infertility
+  [[4]] have been resolved in his patients once they eliminated lectins from
+  their diets. Dr. Paul Saladino writes that the hypothesis that lectins are
+  involved in Parkinson’s disease is also gaining support, with animal studies
+  [[5]] that ‘lectins, once eaten, may be damaging the gut and travelling to the
+  brain, where they appear to be toxic to dopaminergic neurons’.
+items:
+  - no: 1
+    choice: themselves
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: themselves
+      referent: plants
+      number: 복수
+    explanation: defend의 목적어가 주어 plants와 같은 대상이므로 재귀대명사 themselves가 맞다.
+  - no: 2
+    choice: found
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: sugar molecules
+      relation: 수동
+      word: found
+    explanation: "sugar molecules가 장, 뇌 등에서 '발견되는' 수동 관계이므로 과거분사 found가 맞다."
+  - no: 3
+    choice: cause
+    is_correct: true
+    tag: 병렬
+    model_slots:
+      conj: and
+      pair: interrupt와 cause
+      word: cause
+    explanation: 조동사 can에 이어지는 interrupt와 and로 병렬되므로 동사원형 cause가 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: that
+    explanation: 선행사 other health problems를 받고 뒤의 절에 주어가 빠진 불완전한 절이므로 주격 관계대명사 that이 맞다.
+  - no: 5
+    choice: showed
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: animal studies
+      relation: 능동
+      current: showed
+      fixed: showing
+    explanation: "'with+목적어+분사' 구문에서 animal studies가 '보여주는' 능동 관계이므로 showed가 아니라 showing이 되어야 한다."

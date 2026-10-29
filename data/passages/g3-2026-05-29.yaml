@@ -1,0 +1,63 @@
+passage_id: g3-2026-05-29
+kind: grammar
+source: 고3 2026년 5월 학평 / 29번
+text: >
+  A study by Eurofound found that young people who were working remotely [[1]]
+  more difficulties in managing their workload than older colleagues. Moreover,
+  many young people began their careers working remotely during the pandemic,
+  unlike those in older generations who had many years to establish
+  interpersonal connections and embed [[2]] in the organizational culture in an
+  in-person job. A survey by Prospects found that almost half of students and
+  graduates in the United Kingdom found [[3]] difficult to work from home during
+  the pandemic due to a lack of suitable workspace or distractions. While young
+  people may struggle long-term with remote work, perhaps more of a hybrid model
+  [[4]] they can work from home part of the time and work onsite other times,
+  would work well for them. But it may not be that they need a formal hybrid
+  structure with specific days of the week designated for working remotely but
+  instead a fluid option that allows them, if possible, depending on the job
+  role, [[5]] their day-to-day work location.
+items:
+  - no: 1
+    choice: reported
+    is_correct: true
+    tag: 본동사 유무
+    model_slots:
+      subject: young people
+      verb: reported
+    explanation: 주어 young people에 대한 본동사 자리이고 who were working remotely는 수식어이므로 reported가 맞다.
+  - no: 2
+    choice: themselves
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: themselves
+      referent: those in older generations
+      number: 복수
+    explanation: embed의 목적어가 주어 those와 같은 대상이므로 재귀대명사 themselves가 맞다.
+  - no: 3
+    choice: it
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: it
+      referent: to work from home
+      number: 단수
+    explanation: found의 가목적어로 진목적어 to work from home을 가리키므로 it이 맞다.
+  - no: 4
+    choice: where
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: where
+    explanation: 선행사 a hybrid model 뒤에 완전한 절이 이어지므로 관계부사 where가 맞다.
+  - no: 5
+    choice: chooses
+    is_correct: false
+    tag: 준동사
+    model_slots:
+      trigger: allow
+      form: to부정사
+      current: chooses
+      fixed: to choose
+    explanation: allow는 목적격 보어로 to부정사를 취하므로 chooses가 아니라 to choose가 되어야 한다.

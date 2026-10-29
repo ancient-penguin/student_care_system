@@ -1,0 +1,52 @@
+passage_id: g3-2022-10-29
+kind: grammar
+source: 고3 2022년 10월 학평 / 29번
+text: >
+  The idea that leaders inherently possess certain physical, intellectual, or
+  personality traits that distinguish them from nonleaders [[1]] the
+  foundational belief of the trait‑based approach to leadership. This approach
+  dominated leadership research from the late 1800s until the mid‑1940s and
+  has experienced a resurgence of interest in the last couple of decades.
+  Early trait theorists believed that some individuals are born with the
+  traits that allow [[2]] to become great leaders. Thus, early research in
+  this area often presented the widely stated argument [[3]] “leaders are
+  born, not made.” Also, some of the earliest leadership studies were grounded
+  in what [[4]] to as the “great man” theory because researchers at the time
+  focused on identifying traits of highly visible leaders in history who were
+  typically male and associated with the aristocracy or political or military
+  leadership. In more recent history, numerous authors have acknowledged that
+  there are many enduring qualities, [[5]] innate or learned, that contribute
+  to leadership potential. These traits include such things as drive,
+  self-confidence, cognitive ability, conscientiousness, determination,
+  intelligence, and integrity.
+items:
+  - no: 1
+    choice: was
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: The idea, number: 단수, verb: was }
+    explanation: 주어는 that절의 수식을 받는 The idea로 단수이므로 was가 맞다.
+  - no: 2
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: them, referent: some individuals, number: 복수 }
+    explanation: allow의 목적어로 복수 명사 some individuals를 가리키므로 them이 맞다.
+  - no: 3
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: the argument의 내용을 설명하는 완전한 절을 이끄는 동격의 접속사이므로 that이 맞다.
+  - no: 4
+    choice: referred
+    is_correct: false
+    tag: 태(능동·수동)
+    model_slots: { subject: what, relation: 수동, current: referred, fixed: is referred }
+    explanation: what이 ‘great man’ 이론이라고 불리는 수동 관계이고 동사가 필요하므로 referred가 아니라 is referred가 되어야 한다.
+  - no: 5
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 접속사, word: whether }
+    explanation: whether (they are) innate or learned의 형태로 ‘~이든 …이든’의 양보 부사절을 이끄는 접속사이므로 whether가 맞다.

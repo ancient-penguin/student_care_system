@@ -1,0 +1,47 @@
+passage_id: g3-2026-csat-29
+kind: grammar
+source: 2026학년도 수능 / 29번
+text: >
+  We are exceptionally smart, and this helps us adapt to a wide range of
+  environments. But we are not nearly smart enough as individuals [[1]] the
+  adaptive problems that confronted modern humans as they spread across the
+  globe. The package of tools, foraging techniques, ecological knowledge, and
+  social arrangements used by any group of foragers [[2]] far too complex for
+  any individual to create. We are able to learn all the things we need to
+  know in each of the many different environments [[3]] we live only because
+  we acquire information from others. We are much better at learning from
+  others than other species are, and we are [[4]] to learn from others even
+  when we do not understand why our models are doing what they are doing. This
+  psychology allows human populations to accumulate pools of adaptive
+  information that [[5]] exceed the inventive capacities of individuals.
+items:
+  - no: 1
+    choice: to solve
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: enough, form: to부정사, word: to solve }
+    explanation: "‘~할 만큼 충분히’의 enough to부정사 구문이므로 to solve가 맞다."
+  - no: 2
+    choice: being
+    is_correct: false
+    tag: 본동사 유무
+    model_slots: { subject: "The package of tools, ...", exists: 없다, current: being, fixed: is }
+    explanation: 주어 The package ... 뒤에 본동사가 없으므로 being이 아니라 단수 동사 is가 되어야 한다.
+  - no: 3
+    choice: in which
+    is_correct: true
+    tag: 관계사
+    model_slots: { completeness: 완전, word: in which }
+    explanation: 선행사 environments 뒤에 완전한 절(we live)이 이어지므로 in which가 맞다.
+  - no: 4
+    choice: motivated
+    is_correct: true
+    tag: 태(능동·수동)
+    model_slots: { subject: we, relation: 수동, word: motivated }
+    explanation: 우리가 배우도록 동기 부여를 받는 수동 관계이므로 are motivated가 맞다.
+  - no: 5
+    choice: greatly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: greatly, target: exceed, role: 부사 }
+    explanation: 동사 exceed를 수식하는 부사이므로 greatly가 맞다.

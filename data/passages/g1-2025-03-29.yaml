@@ -1,0 +1,60 @@
+passage_id: g1-2025-03-29
+kind: grammar
+source: 고1 2025년 3월 학평 / 29번
+text: >
+  Routines enable athletes to evaluate competition conditions. For example,
+  bouncing a ball in a volleyball service routine [[1]] the server with
+  information about the ball, the floor, and the state of her muscles. This
+  information can then be used to [[2]] prepare for her serve. Routines also
+  enable athletes to adjust and fine-tune their preparations [[3]] on those
+  evaluations or in pursuit of a particular competitive goal. This adaptation
+  can involve adjustment to the conditions, rivals, competitive situation, or
+  internal influences [[4]] can affect performance. Just like adjusting a
+  race-car engine to the conditions of the track, air temperature, and weather,
+  routines adjust all competitive components [[5]] proper performance.
+items:
+  - no: 1
+    choice: supplies
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: bouncing a ball
+      number: 단수
+      verb: supplies
+    explanation: 주어는 동명사구 bouncing a ball ...이므로 단수로 취급해 supplies가 맞다.
+  - no: 2
+    choice: properly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: properly
+      target: prepare
+      role: 부사
+    explanation: properly는 동사 prepare를 수식하는 부사이므로 맞다.
+  - no: 3
+    choice: based
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: their preparations
+      relation: 수동
+      word: based
+    explanation: 준비가 평가에 '기반을 두게 되는' 것이므로 based on 형태의 과거분사 based가 맞다.
+  - no: 4
+    choice: what
+    is_correct: false
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      current: what
+      fixed: that
+    explanation: 선행사 internal influences가 있고 뒤의 절에 주어가 없으므로 what이 아니라 주격 관계대명사 that(which)이 되어야 한다.
+  - no: 5
+    choice: to achieve
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 목적(~하기 위해)
+      form: to부정사
+      word: to achieve
+    explanation: "'적절한 수행을 달성하기 위해'라는 목적을 나타내므로 to부정사 to achieve가 맞다."

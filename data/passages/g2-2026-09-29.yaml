@@ -1,0 +1,47 @@
+passage_id: g2-2026-09-29
+kind: grammar
+source: 고2 2026년 9월 학평 / 29번
+text: >
+  Capitalism is not a system where cash is everywhere but rather [[1]] in
+  which islands of cash exchange exist within oceans of cheap―or potentially
+  cheap―natures. [[2]] life within the cash nexus is expensive, and it grows
+  more expensive over time. Workers’ wages can be frozen, even rolled back,
+  but in the end inequality leads to crises of the kind we’ve recently seen
+  [[3]] about populist protests in the United States and the United Kingdom.
+  Workers demand dignity, and their labor becomes expensive. Production
+  processes burn through an island, and energy is no longer cheap. The climate
+  changes, and crops can no longer grow as [[4]] as they once did. Frontiers
+  are so important in these processes because they offer places [[5]] the new
+  cheap things can be seized ―and the cheap work of humans and other natures
+  can be forcefully taken.
+items:
+  - no: 1
+    choice: one
+    is_correct: true
+    tag: 대명사
+    model_slots: { word: one, referent: a system, number: 단수 }
+    explanation: 앞의 단수 명사 a system을 대신하므로 one이 맞다.
+  - no: 2
+    choice: Reproducing
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: 문장의 주어 자리, form: 동명사, word: Reproducing }
+    explanation: 본동사 is의 주어 역할을 하는 동명사이므로 Reproducing이 맞다.
+  - no: 3
+    choice: bring
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: 지각동사 seen, form: 원형부정사, word: bring }
+    explanation: 지각동사 see의 목적격보어 자리이므로 원형부정사 bring이 맞다.
+  - no: 4
+    choice: abundantly
+    is_correct: true
+    tag: 형용사·부사
+    model_slots: { word: abundantly, target: grow, role: 부사 }
+    explanation: as ~ as 사이에서 동사 grow를 수식하는 부사이므로 abundantly가 맞다.
+  - no: 5
+    choice: which
+    is_correct: false
+    tag: 관계사
+    model_slots: { completeness: 완전, current: which, fixed: where }
+    explanation: 뒤의 절(the new cheap things can be seized)이 완전하므로 which가 아니라 where가 되어야 한다.

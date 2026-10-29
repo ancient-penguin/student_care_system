@@ -1,0 +1,62 @@
+passage_id: g2-2024-06-29
+kind: grammar
+source: 고2 2024년 6월 학평 / 29번
+text: >
+  The built-in capacity for smiling is proven by the remarkable observation
+  [[1]] babies who are congenitally both deaf and blind, who have never seen a
+  human face, also start to smile at around 2 months. However, smiling in blind
+  babies eventually [[2]] if nothing is done to reinforce it. Without the right
+  feedback, smiling dies out. But here’s a fascinating fact: blind babies will
+  continue to smile if they are cuddled, bounced, nudged, and tickled by an
+  adult ―anything to let [[3]] know that they are not alone and that someone
+  cares about them. This social feedback encourages the baby to continue
+  smiling. In this way, early experience operates with our biology [[4]] social
+  behaviors. In fact, you don’t need the cases of blind babies to make the
+  point. Babies with sight smile more at you when you look at them or, better
+  still, [[5]] back at them.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: the remarkable observation의 내용을 설명하는 완전한 절이 이어지므로 동격의 접속사 that이 맞다.
+  - no: 2
+    choice: disappears
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: smiling
+      number: 단수
+      verb: disappears
+    explanation: 주어는 동명사 smiling이므로 단수 동사 disappears가 맞다.
+  - no: 3
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: blind babies
+      number: 복수
+    explanation: let의 목적어로 복수 명사 blind babies를 가리키므로 them이 맞다.
+  - no: 4
+    choice: to establish
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: operates
+      form: to부정사
+      word: to establish
+    explanation: "'확립하기 위해' 작용한다는 목적의 의미이므로 to부정사 to establish가 맞다."
+  - no: 5
+    choice: smiling
+    is_correct: false
+    tag: 병렬
+    model_slots:
+      conj: or
+      pair: look과 smile
+      current: smiling
+      fixed: smile
+    explanation: when절의 동사 look과 or로 병렬되므로 smiling이 아니라 smile이 되어야 한다.

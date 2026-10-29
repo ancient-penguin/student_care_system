@@ -1,0 +1,66 @@
+passage_id: g3-2026-07-29
+kind: grammar
+source: 고3 2026년 7월 학평 / 29번
+text: >
+  To date, the focus of much of the research in medicine and the health sciences
+  [[1]] understandably been on disease processes. Research on the physiological
+  mechanisms linking mind and body has also focused primarily on the negative
+  consequences of factors such as stress, trauma and ageing. Whereas a large
+  body of research exists [[2]] the relationship between functioning of the
+  brain and that of systems such as the autonomic, endocrine and immune systems,
+  most of this research has focused on negative outcomes. It is becoming clear
+  that well-being and ill-being may have biological, psychological, social and
+  spiritual causes that are only partially overlapping and [[3]] to understand
+  the body during states of wellness rather than under conditions of illness is
+  essentially a paradigm shift in thinking. The positive health construct points
+  to the intriguing possibility [[4]] the physiological mechanisms underlying
+  thriving may be unique and may not merely mirror those underlying disease and
+  illness. For example, the impact of well-being on secretion patterns of such
+  hormones as cortisol, serotonin and oxytocin is not just the opposite to [[5]]
+  of stress and distress.
+items:
+  - no: 1
+    choice: has
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: the focus
+      number: 단수
+      verb: has
+    explanation: 주어는 research나 sciences가 아니라 the focus이므로 단수 동사 has가 맞다.
+  - no: 2
+    choice: detailing
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: research
+      relation: 능동
+      word: detailing
+    explanation: a large body of research가 관계를 '자세히 설명하는' 능동 관계이므로 현재분사 detailing이 맞다.
+  - no: 3
+    choice: attempting
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: 주어 자리
+      form: 동명사
+      word: attempting
+    explanation: that절에서 본동사 is의 주어 자리이므로 동명사 attempting이 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: the intriguing possibility의 내용을 설명하는 완전한 절이 이어지므로 동격의 접속사 that이 맞다.
+  - no: 5
+    choice: those
+    is_correct: false
+    tag: 대명사
+    model_slots:
+      current: those
+      referent: the impact
+      number: 단수
+      fixed: that
+    explanation: those는 단수 명사 the impact를 가리키므로 those가 아니라 that이 되어야 한다.

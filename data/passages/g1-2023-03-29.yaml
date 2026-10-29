@@ -1,0 +1,60 @@
+passage_id: g1-2023-03-29
+kind: grammar
+source: 고1 2023년 3월 학평 / 29번
+text: >
+  The most noticeable human characteristic projected onto animals is [[1]] they
+  can talk in human language. Physically, animal cartoon characters and toys
+  [[2]] after animals are also most often deformed in such a way as to resemble
+  humans. This is achieved by [[3]] them with humanlike facial features and
+  deformed front legs to resemble human hands. In more recent animated movies
+  the trend has been to show the animals in a more “natural” way. However, they
+  still use their front legs [[4]] human hands (for example, lions can pick up
+  and lift small objects with one paw), and they still talk with an appropriate
+  facial expression. A general strategy that is used to make the animal
+  characters more emotionally appealing, both to children and adults, [[5]] to
+  give them enlarged and deformed childlike features.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: is의 보어 자리에 완전한 절(they can talk ...)이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 2
+    choice: made
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: animal cartoon characters and toys
+      relation: 수동
+      word: made
+    explanation: 만화 캐릭터와 장난감은 동물을 본떠 '만들어지는' 것이므로 수동의 과거분사 made가 맞다.
+  - no: 3
+    choice: showing
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: by
+      form: 동명사
+      word: showing
+    explanation: 전치사 by의 목적어 자리이므로 동명사 showing이 맞다.
+  - no: 4
+    choice: like
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 전치사
+      word: like
+    explanation: 뒤에 명사구 human hands만 오므로 '~처럼'을 뜻하는 전치사 like가 맞다.
+  - no: 5
+    choice: are
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: A general strategy
+      number: 단수
+      current: are
+      fixed: is
+    explanation: 주어는 that절의 수식을 받는 A general strategy로 단수이므로 are가 아니라 is가 되어야 한다.

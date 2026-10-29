@@ -1,0 +1,62 @@
+passage_id: g1-2023-11-29
+kind: grammar
+source: 고1 2023년 11월 학평 / 29번
+text: >
+  Some countries have proposed tougher guidelines for determining brain death
+  when transplantation―transferring organs to others―is under consideration. In
+  several European countries, there are legal requirements which specify [[1]] a
+  whole team of doctors must agree over the diagnosis of death in the case of a
+  potential donor. The reason for these strict regulations for diagnosing brain
+  death in potential organ donors [[2]], no doubt, to ease public fears of a
+  premature diagnosis of brain death for the purpose of obtaining organs. But it
+  is questionable whether these requirements reduce public suspicions as much as
+  they create [[3]]. They certainly maintain mistaken beliefs that diagnosing
+  brain death is an unreliable process [[4]] precision. As a matter of
+  consistency, at least, criteria for diagnosing the deaths of organ donors
+  should be exactly the same as for those for [[5]] immediate burial or
+  cremation is intended.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: specify의 목적어 자리에 완전한 절이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 2
+    choice: is
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: The reason
+      number: 단수
+      verb: is
+    explanation: 주어는 regulations가 아니라 The reason이므로 단수 동사 is가 맞다.
+  - no: 3
+    choice: them
+    is_correct: true
+    tag: 대명사
+    model_slots:
+      word: them
+      referent: public suspicions
+      number: 복수
+    explanation: create의 목적어로 복수 명사 public suspicions를 가리키므로 them이 맞다.
+  - no: 4
+    choice: lack
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: an unreliable process
+      relation: 능동
+      current: lack
+      fixed: lacking
+    explanation: "이미 본동사 maintain이 있고 process가 정확성이 '부족한' 능동 관계이므로 lack이 아니라 lacking이 되어야 한다."
+  - no: 5
+    choice: whom
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: whom
+    explanation: 전치사 for의 목적어 역할을 하는 관계대명사로 뒤에 완전한 절이 이어지므로 whom이 맞다.

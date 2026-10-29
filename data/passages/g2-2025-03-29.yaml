@@ -1,0 +1,62 @@
+passage_id: g2-2025-03-29
+kind: grammar
+source: 고2 2025년 3월 학평 / 29번
+text: >
+  The prominence of the social dimension in food writing might suggest that the
+  flavor of food is taking a back seat. I suspect [[1]] most people view flavor
+  as of secondary importance in social settings where food is served. Although
+  our social gatherings coalesce around food, the meaning of these gatherings
+  does not seem to depend on flavor. Flavor [[2]] with the narrow purpose of
+  filling the belly, and once that is accomplished it provides the backdrop for
+  whatever social dynamics characterize the gathering. These can be understood
+  independently of the flavor of the food on offer, the appreciation of [[3]] is
+  understood to be personal and subjective. According to this conventional
+  wisdom, the ceremonies and rituals around food, the social events that supply
+  food with its meaning, [[4]] not depend on the quality of sensations provided
+  by the food. To focus [[5]] on flavor is to miss the larger significance of
+  these social relations.
+items:
+  - no: 1
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots:
+      role: 명사절을 이끄는 접속사
+      word: that
+    explanation: suspect의 목적어 자리에 완전한 절이 이어지므로 명사절을 이끄는 접속사 that이 맞다.
+  - no: 2
+    choice: assists
+    is_correct: true
+    tag: 수일치
+    model_slots:
+      subject: Flavor
+      number: 단수
+      verb: assists
+    explanation: 주어 Flavor가 단수이므로 assists가 맞다.
+  - no: 3
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 완전
+      word: which
+    explanation: 선행사 the food를 받아 the appreciation of which가 주어인 절을 이끌며 두 절을 연결하므로 관계대명사 which가 맞다.
+  - no: 4
+    choice: does
+    is_correct: false
+    tag: 수일치
+    model_slots:
+      subject: the ceremonies and rituals
+      number: 복수
+      current: does
+      fixed: do
+    explanation: 주어는 the ceremonies and rituals로 복수이므로 does가 아니라 do가 되어야 한다.
+  - no: 5
+    choice: excessively
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: excessively
+      target: focus
+      role: 부사
+    explanation: excessively는 동사 focus를 수식하는 부사이므로 맞다.

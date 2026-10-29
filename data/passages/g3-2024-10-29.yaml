@@ -1,0 +1,65 @@
+passage_id: g3-2024-10-29
+kind: grammar
+source: 고3 2024년 10월 학평 / 29번
+text: >
+  Sometime late in the next millennium, our descendants may head off to other
+  star systems. They may use comets as stepping-stones, some of which are only
+  [[1]] bound to our sun because they reach almost halfway to the nearest star
+  system, Alpha Centauri. Our remote descendants may eventually colonize much of
+  our galaxy just as the first living organisms on Earth once colonized Earth’s
+  young oceans. Interstellar migrations will depend on as yet unimagined
+  technologies for driving ships, for maintaining sustainable environments, and
+  for putting humans into hibernations [[2]] for centuries. Interstellar
+  journeys will also depend on the existence of groups willing [[3]] long and
+  dangerous voyages with little or no hope of returning. It would take
+  spaceships [[4]] at 1 percent of the speed of light more than four hundred
+  years to reach the Alpha Centauri system. But if they spread out from there at
+  a similar rate, they could settle star systems throughout the Milky Way within
+  one hundred million years, [[5]] is just a bit longer than the span of time
+  since dinosaurs ruled our Earth.
+items:
+  - no: 1
+    choice: loosely
+    is_correct: true
+    tag: 형용사·부사
+    model_slots:
+      word: loosely
+      target: bound
+      role: 부사
+    explanation: loosely는 과거분사 bound를 수식하는 부사이므로 맞다.
+  - no: 2
+    choice: last
+    is_correct: false
+    tag: 분사
+    model_slots:
+      noun: hibernations
+      relation: 능동
+      current: last
+      fixed: lasting
+    explanation: 동면이 수 세기 동안 '지속되는' 능동 관계이고 문장에 본동사가 따로 있으므로 last가 아니라 lasting이 되어야 한다.
+  - no: 3
+    choice: to risk
+    is_correct: true
+    tag: 준동사
+    model_slots:
+      trigger: willing
+      form: to부정사
+      word: to risk
+    explanation: be willing to-V 구조로 willing 뒤에는 to부정사가 오므로 to risk가 맞다.
+  - no: 4
+    choice: traveling
+    is_correct: true
+    tag: 분사
+    model_slots:
+      noun: spaceships
+      relation: 능동
+      word: traveling
+    explanation: 우주선이 '이동하는' 능동 관계이므로 현재분사 traveling이 맞다.
+  - no: 5
+    choice: which
+    is_correct: true
+    tag: 관계사
+    model_slots:
+      completeness: 불완전
+      word: which
+    explanation: 앞 내용(one hundred million years)을 받는 계속적 용법이고 뒤의 절에 주어가 없으므로 which가 맞다.

@@ -1,0 +1,50 @@
+passage_id: g2-2023-09-29
+kind: grammar
+source: 고2 2023년 9월 학평 / 29번
+text: >
+  There is little doubt that we are driven by the sell-by date. Once an item
+  is past that date it goes into the waste stream, further [[1]] its carbon
+  footprint. Remember those items have already travelled hundreds of miles
+  [[2]] the shelves and once they go into waste they start a new carbon mile
+  journey. But we all make our own judgement about sell-by dates; those
+  brought up during the Second World War [[3]] often scornful of the terrible
+  waste they believe such caution encourages. The manufacturer of the food has
+  a view when making or growing something [[4]] by the time the product
+  reaches the shelves it has already been travelling for so many days and
+  possibly many miles. The manufacturer then decides that a product can
+  reasonably be consumed within say 90 days and 90 days minus so many days for
+  travelling gives the sell-by date. But [[5]] it becomes toxic is something
+  each individual can decide. It would seem to make sense not to buy large
+  packs of perishable goods but non-perishable items may become
+  cost-effective.
+items:
+  - no: 1
+    choice: increasing
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: an item, relation: 능동, word: increasing }
+    explanation: 폐기물이 된 물건이 탄소 발자국을 늘리는 능동 관계의 분사구문이므로 increasing이 맞다.
+  - no: 2
+    choice: reach
+    is_correct: false
+    tag: 준동사
+    model_slots: { trigger: have already travelled, form: to부정사, current: reach, fixed: to reach }
+    explanation: 이미 본동사 have travelled가 있으므로 ‘~하기 위해’라는 목적의 to부정사 to reach가 되어야 한다.
+  - no: 3
+    choice: are
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: those brought up during the Second World War, number: 복수, verb: are }
+    explanation: 주어 those(~한 사람들)가 복수이므로 are가 맞다.
+  - no: 4
+    choice: that
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: that }
+    explanation: a view의 내용을 설명하는 완전한 절을 이끄는 동격의 접속사이므로 that이 맞다.
+  - no: 5
+    choice: whether
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 명사절을 이끄는 접속사, word: whether }
+    explanation: is의 주어 역할을 하는 명사절을 이끄는 접속사이므로 whether가 맞다.

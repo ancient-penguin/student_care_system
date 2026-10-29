@@ -1,0 +1,48 @@
+passage_id: g3-2024-07-29
+kind: grammar
+source: 고3 2024년 7월 학평 / 29번
+text: >
+  When we assess potential, we make the cardinal error of focusing on starting
+  points—the abilities that are immediately visible. In a world obsessed with
+  innate talent, we assume the people with the most promise [[1]] the ones who
+  stand out right away. But high achievers vary dramatically in their initial
+  aptitudes. If we judge people only by what they can do on day one, their
+  potential remains hidden. You can’t tell [[2]] people will land from where
+  they begin. With the right opportunity and motivation [[3]], anyone can
+  build the skills to achieve greater things. Potential is not a matter of
+  where you start, but of how far you travel. We need to focus less on
+  starting points and more on distance [[4]]. For every Mozart who makes a big
+  splash early, there are multiple Bachs who ascend slowly and [[5]] late.
+  They’re not born with invisible superpowers; most of their gifts are
+  homegrown or homemade.
+items:
+  - no: 1
+    choice: are
+    is_correct: true
+    tag: 수일치
+    model_slots: { subject: the people with the most promise, number: 복수, verb: are }
+    explanation: that절의 주어는 the people로 복수이므로 are가 맞다.
+  - no: 2
+    choice: where
+    is_correct: true
+    tag: 접속사·명사절
+    model_slots: { role: 의문사, word: where }
+    explanation: tell의 목적어로 완전한 절을 이끄는 의문사(어디에)이므로 where가 맞다.
+  - no: 3
+    choice: to learn
+    is_correct: true
+    tag: 준동사
+    model_slots: { trigger: motivation, form: to부정사, word: to learn }
+    explanation: 명사 motivation을 수식하는 to부정사이므로 to learn이 맞다.
+  - no: 4
+    choice: traveled
+    is_correct: true
+    tag: 분사
+    model_slots: { noun: distance, relation: 수동, word: traveled }
+    explanation: 거리는 이동되는 대상인 수동 관계이므로 과거분사 traveled가 맞다.
+  - no: 5
+    choice: blooming
+    is_correct: false
+    tag: 병렬
+    model_slots: { conj: and, pair: ascend와 bloom(관계절의 동사), current: blooming, fixed: bloom }
+    explanation: 관계절 who의 동사 ascend와 and로 병렬되므로 blooming이 아니라 bloom이 되어야 한다.
