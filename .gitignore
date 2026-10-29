@@ -17,6 +17,7 @@ __pycache__/
 # Node
 node_modules/
 dist/
+*.tsbuildinfo
 
 # 기타
 .DS_Store
