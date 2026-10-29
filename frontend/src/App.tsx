@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Navigate, NavLink, Outlet, Route, Routes } from "react-router";
+import { Navigate, NavLink, Outlet, Route, Routes, useMatch } from "react-router";
 import { useAuth } from "./auth";
 import Login from "./pages/Login";
 import StudentHome from "./pages/student/Home";
@@ -30,8 +30,9 @@ function Home() {
 
 function StudentLayout() {
   const { user, signOut } = useAuth();
+  const solving = useMatch("/s/a/:id");
   return (
-    <div className="page">
+    <div className={"page" + (solving ? " solve" : "")}>
       <header className="topbar">
         <NavLink to="/s" className="brand">문법 숙제</NavLink>
         <span className="muted small">{user?.name}</span>

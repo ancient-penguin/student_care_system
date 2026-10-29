@@ -7,7 +7,7 @@ from typing import Literal
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
-from sqlalchemy import select, update
+from sqlalchemy import func, select, update
 from sqlalchemy.orm import Session
 
 from app.assignments_service import (
@@ -300,6 +300,88 @@ def overview(week: date | None = None, weeks: int = 6, db: Session = Depends(get
                 "answered": counts.get(a.id, 0), "total": len(a.item_order),
             }
             for a in overdue_rows if a.student.is_active
+        ],
+    }
+
+
+@router.get("/dashboard")
+def dashboard(db: Session = Depends(get_db)):
+    """요약 지표 + 학생별 최근 숙제 + 세트별 성과(제출된 답 기준)."""
+    now = utcnow()
+    students = list(db.scalars(select(User).where(User.role == "student", User.is_active.is_(True)).order_by(User.name)))
+    student_ids = [s.id for s in students]
+    assignments = list(db.scalars(
+        select(Assignment).where(Assignment.student_id.in_(student_ids)).order_by(Assignment.assigned_at.desc(), Assignment.id.desc())
+    )) if student_ids else []
+    counts = answered_counts(db, [a.id for a in assignments])
+
+    # 제출된 답: (학생, 세트, 판단 정답, 태그 정답, 리뷰 여부)
+    rows = db.execute(
+        select(Assignment.student_id, Assignment.set_id, Answer.judgement_ok, Answer.tag_ok, Review.id)
+        .join(Answer, Answer.assignment_id == Assignment.id)
+        .outerjoin(Review, Review.answer_id == Answer.id)
+        .where(Assignment.submitted_at.is_not(None), Assignment.student_id.in_(student_ids or [0]))
+    ).all()
+    per_student: dict[int, list[int]] = {}  # [답 수, 판단 정답 수, 검토 대기 수]
+    per_set: dict[int, list[int]] = {}  # [답 수, 판단 정답 수, 태그 정답 수]
+    for sid, set_id, j_ok, t_ok, review_id in rows:
+        s = per_student.setdefault(sid, [0, 0, 0])
+        s[0] += 1
+        s[1] += 1 if j_ok else 0
+        s[2] += 0 if review_id else 1
+        q = per_set.setdefault(set_id, [0, 0, 0])
+        q[0] += 1
+        q[1] += 1 if j_ok else 0
+        q[2] += 1 if t_ok else 0
+
+    last_activity = dict(db.execute(
+        select(Assignment.student_id, func.max(Answer.saved_at))
+        .join(Answer, Answer.assignment_id == Assignment.id)
+        .where(Assignment.student_id.in_(student_ids or [0])).group_by(Assignment.student_id)
+    ).all())
+
+    latest: dict[int, Assignment] = {}
+    for a in assignments:
+        latest.setdefault(a.student_id, a)
+
+    # 최근 배정된 세트부터 최대 8개
+    recent_sets: list[int] = []
+    for a in assignments:
+        if a.set_id not in recent_sets:
+            recent_sets.append(a.set_id)
+    recent_sets = recent_sets[:8]
+    submitted_per_set = Counter(a.set_id for a in assignments if a.submitted_at)
+    set_titles = {qs.id: qs.title for qs in db.scalars(select(QuestionSet).where(QuestionSet.id.in_(recent_sets or [0])))}
+
+    total_answers = sum(v[0] for v in per_student.values())
+    rate = lambda ok, n: ok / n if n else None  # noqa: E731
+    return {
+        "metrics": {
+            "total_students": len(students),
+            "accuracy": rate(sum(v[1] for v in per_student.values()), total_answers),
+            "pending_reviews": sum(v[2] for v in per_student.values()),
+            "overdue": sum(1 for a in assignments if not a.submitted_at and as_utc(a.due_at) < now),
+        },
+        "students": [
+            {
+                "id": s.id,
+                "name": s.name,
+                "latest": summary(latest[s.id], counts.get(latest[s.id].id, 0)) if s.id in latest else None,
+                "accuracy": rate(per_student.get(s.id, [0, 0])[1], per_student.get(s.id, [0])[0]),
+                "pending_reviews": per_student.get(s.id, [0, 0, 0])[2],
+                "last_activity_at": iso(last_activity.get(s.id)),
+            }
+            for s in students
+        ],
+        "assignments_chart": [
+            {
+                "set_id": set_id,
+                "title": set_titles.get(set_id, ""),
+                "submitted": submitted_per_set.get(set_id, 0),
+                "accuracy": rate(per_set.get(set_id, [0, 0])[1], per_set.get(set_id, [0])[0]),
+                "tag_accuracy": rate(per_set.get(set_id, [0, 0, 0])[2], per_set.get(set_id, [0])[0]),
+            }
+            for set_id in recent_sets
         ],
     }
 

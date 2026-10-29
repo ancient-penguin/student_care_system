@@ -3,6 +3,7 @@ import { useNavigate, useParams, useSearchParams } from "react-router";
 import { api, ApiError, setBeforeUnauthorized, storage } from "../../api";
 import { findTemplate } from "../../components/Filled";
 import { MarkedText } from "../../components/Passage";
+import { RadioGroup } from "../../components/RadioRow";
 import { circled, fmtDateTime } from "../../format";
 import type { StudentAssignment, StudentItem, Template, Templates } from "../../types";
 
@@ -162,12 +163,18 @@ export default function Solve() {
   }
 
   const header = (
-    <div className="stack-sm">
+    <div className="solve-head">
       <div className="row between">
         <strong>{data.title}</strong>
         <span className="small muted">마감 {fmtDateTime(data.due_at)}</span>
       </div>
-      <div className="progress"><div style={{ width: `${(answeredCount / total) * 100}%` }} /></div>
+      <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={answeredCount}>
+        <div style={{ width: `${(answeredCount / total) * 100}%` }} />
+      </div>
+      <div className="progress-meta">
+        <span>{answeredCount} / {total} 완료</span>
+        {typeof idx === "number" && <span>{idx + 1}번째 문항</span>}
+      </div>
       {overdue && <div className="notice warn small">마감이 지났어요. 지금 제출하면 지각으로 기록돼요.</div>}
     </div>
   );
@@ -216,52 +223,66 @@ export default function Solve() {
   return (
     <div className="stack">
       {header}
-      <div className="row between small muted">
-        <span>{idx + 1} / {total}번째 문항 · {passage.source} {circled(item.no)}</span>
-        <button className="btn link small" onClick={() => setShowPassage(true)}>지문 전체 보기</button>
-      </div>
+      <div className="solve-split">
+        <aside className="card passage-pane" aria-label="지문">
+          <p className="pane-label">{passage.source}</p>
+          <p className="passage">
+            <MarkedText text={passage.text} choices={passageChoices} underline="all" highlight={item.no} />
+          </p>
+        </aside>
 
-      <div className="card sentence">
-        <MarkedText text={item.sentence} choices={passageChoices} underline={[item.no]} highlight={item.no} />
-      </div>
+        <div className="solve-panel">
+          <div className="row between small muted">
+            <span>{idx + 1} / {total}번째 문항 · {passage.source} {circled(item.no)}</span>
+            <button className="btn link small only-narrow" onClick={() => setShowPassage(true)}>지문 전체 보기</button>
+          </div>
 
-      <section className="stack-sm">
-        <h3 className="h3">1. 밑줄 친 부분은 문법상</h3>
-        <div className="seg">
-          <button className={"btn" + (form.judgement === true ? " selected" : "")} onClick={() => setJudgement(true)}>맞다</button>
-          <button className={"btn" + (form.judgement === false ? " selected" : "")} onClick={() => setJudgement(false)}>틀리다</button>
+          <div className="card sentence">
+            <MarkedText text={item.sentence} choices={passageChoices} underline={[item.no]} highlight={item.no} />
+          </div>
+
+          <section className="stack-sm">
+            <h3 className="step-title"><span className="step-no">1</span>밑줄 친 부분은 문법상</h3>
+            <RadioGroup
+              name="judgement"
+              className="cols-2"
+              options={[{ value: true, label: "맞다" }, { value: false, label: "틀리다" }]}
+              value={form.judgement}
+              onChange={setJudgement}
+            />
+          </section>
+
+          {form.judgement !== null && (
+            <section className="stack-sm">
+              <h3 className="step-title"><span className="step-no">2</span>근거가 되는 문법 포인트</h3>
+              <RadioGroup
+                name="tag"
+                className="tags"
+                options={tpls.tags.map((t) => ({ value: t, label: t }))}
+                value={form.tag}
+                onChange={(t) => setForm((f) => ({ ...f, tag: t }))}
+              />
+            </section>
+          )}
+
+          {tpl && (
+            <section className="stack-sm">
+              <h3 className="step-title"><span className="step-no">3</span>근거 문장 완성하기</h3>
+              <div className="card template-fill">
+                <TemplateInputs template={tpl} values={form.slots} onChange={(name, v) => setForm((f) => ({ ...f, slots: { ...f.slots, [name]: v } }))} />
+              </div>
+            </section>
+          )}
+
+          {error && <p className="error">{error}</p>}
+
+          <div className="row between nav-buttons">
+            <button className="btn" disabled={idx === 0 || saving} onClick={() => (complete ? saveAndGo(idx - 1) : go(idx - 1))}>← 이전</button>
+            <button className="btn primary" disabled={!complete || saving} onClick={() => saveAndGo(idx + 1 < total ? idx + 1 : "submit")}>
+              {saving ? "저장 중…" : idx + 1 < total ? "다음 →" : "다 풀었어요 →"}
+            </button>
+          </div>
         </div>
-      </section>
-
-      {form.judgement !== null && (
-        <section className="stack-sm">
-          <h3 className="h3">2. 근거가 되는 문법 포인트</h3>
-          <div className="tag-grid">
-            {tpls.tags.map((t) => (
-              <button key={t} className={"btn tag" + (form.tag === t ? " selected" : "")} onClick={() => setForm((f) => ({ ...f, tag: t }))}>
-                {t}
-              </button>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {tpl && (
-        <section className="stack-sm">
-          <h3 className="h3">3. 근거 문장 완성하기</h3>
-          <div className="card template-fill">
-            <TemplateInputs template={tpl} values={form.slots} onChange={(name, v) => setForm((f) => ({ ...f, slots: { ...f.slots, [name]: v } }))} />
-          </div>
-        </section>
-      )}
-
-      {error && <p className="error">{error}</p>}
-
-      <div className="row between nav-buttons">
-        <button className="btn" disabled={idx === 0 || saving} onClick={() => (complete ? saveAndGo(idx - 1) : go(idx - 1))}>← 이전</button>
-        <button className="btn primary" disabled={!complete || saving} onClick={() => saveAndGo(idx + 1 < total ? idx + 1 : "submit")}>
-          {saving ? "저장 중…" : idx + 1 < total ? "다음 →" : "다 풀었어요 →"}
-        </button>
       </div>
 
       {showPassage && (

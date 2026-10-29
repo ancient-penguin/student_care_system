@@ -299,3 +299,19 @@ def test_overdue_and_late_submission(client, world, teacher):
     assert r.json()["is_late"] is True
     lst = client.get("/student/assignments", headers=s["headers"]).json()
     assert lst[0]["status"] == "late_done"
+
+
+def test_dashboard_metrics(client, world, teacher):
+    s = world.students["kim"]
+    detail = answer_all(client, s["headers"], s["assignment"])
+    assert client.post(f"/student/assignments/{s['assignment']}/submit", headers=s["headers"]).status_code == 200
+    first = client.get(f"/teacher/assignments/{s['assignment']}", headers=teacher).json()["passages"][0]["items"][0]
+    client.put(f"/teacher/answers/{first['answer']['answer_id']}/review", headers=teacher, json={"status": "ok"})
+
+    d = client.get("/teacher/dashboard", headers=teacher).json()
+    assert d["metrics"] == {"total_students": 2, "accuracy": 1.0, "pending_reviews": len(detail["items"]) - 1, "overdue": 0}
+    rows = {r["name"]: r for r in d["students"]}
+    assert rows["kim"]["latest"]["status"] == "done" and rows["kim"]["accuracy"] == 1.0
+    assert rows["lee"]["latest"]["status"] == "not_started" and rows["lee"]["accuracy"] is None
+    assert d["assignments_chart"] == [{"set_id": world.set_id, "title": "1주차", "submitted": 1, "accuracy": 1.0, "tag_accuracy": 1.0}]
+    assert client.get("/teacher/dashboard", headers=s["headers"]).status_code == 403
